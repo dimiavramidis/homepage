@@ -1,11 +1,8 @@
-In th following youtube video its explained within 2 minutes how to host a static website for free using github
-https://www.youtube.com/watch?v=e5AwNU3Y2es&ab_channel=IdeaSpot
-
-Here Some instructtions:
-
 # Setting Up GitHub Pages with a Custom Domain
 
 This guide will help you set up a GitHub Pages site and configure it to use a custom domain like `www.companyxyz.de`.
+In th following youtube video its explained within 2 minutes how to host a static website for free using github
+https://www.youtube.com/watch?v=e5AwNU3Y2es&ab_channel=IdeaSpot
 
 ## Step 1: Create a GitHub Repository
 
