@@ -163,7 +163,7 @@
 
 .nav-dropdown.navbar-toggleable-xl {
   bottom: 0;
-  display: none;
+  display: inline-block;
   left: 0;
   overflow-x: hidden;
   position: fixed;
@@ -175,17 +175,17 @@
   z-index: 999; }
 
 .nav-dropdown-sm {
-  display: block !important;
+  display: inline-block;
   overflow-x: hidden;
   overflow: auto;
   padding-top: 3.875rem; }
   .nav-dropdown-sm::after {
     content: "";
-    display: block;
+    display: inline-block;
     height: 3rem;
     width: 100%; }
   .nav-dropdown-sm.collapse.in ~ .navbar-close {
-    display: block !important; }
+    display: inline-block; }
   .nav-dropdown-sm.collapsing, .nav-dropdown-sm.collapse.in {
     transform: translateX(0);
     -ms-transform: translateX(0);
@@ -198,7 +198,7 @@
     -ms-transform: translateX(-100%);
     -webkit-transform: translateX(-100%); }
   .nav-dropdown-sm .nav-item {
-    display: block;
+    display: inline-block;
     margin-left: 0 !important;
     padding-left: 0; }
   .nav-dropdown-sm .link,
@@ -228,7 +228,7 @@
     .nav-dropdown-sm .nav-btn + .nav-btn {
       padding-top: 0.625rem; }
       .nav-dropdown-sm .nav-btn + .nav-btn::before {
-        display: none; }
+        display: inline-block; }
   .nav-dropdown-sm .btn {
     padding: 0.625rem 0; }
   .nav-dropdown-sm .dropdown-toggle[data-toggle="dropdown-submenu"]::after {
