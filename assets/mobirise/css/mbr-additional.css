@@ -778,6 +778,19 @@ a {
     padding-right: 16px;
   }
 }
+.cid-ukdnoPWYU6 {
+  padding-top: 10rem;
+  padding-bottom: 0rem;
+  background-color: #e7f2f7;
+}
+.cid-ukdnoPWYU6 .mbr-section-title {
+  text-align: center;
+  color: #000000;
+}
+.cid-ukdnoPWYU6 .mbr-section-subtitle {
+  text-align: center;
+  color: #232323;
+}
 .cid-uk1RAPyx0v {
   padding-top: 10rem;
   padding-bottom: 5rem;
@@ -799,7 +812,10 @@ a {
   top: 0;
 }
 .cid-uk1RAPyx0v .mbr-side-description {
-  text-align: left;
+  text-align: center;
+}
+.cid-uk1RAPyx0v .mbr-description {
+  text-align: center;
 }
 .cid-uk58NOIuOA {
   padding-top: 6rem;
