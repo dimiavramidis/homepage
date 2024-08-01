@@ -131,18 +131,36 @@
       background: none; }
 
 @media (max-width: 767px) {
-  .nav-dropdown.navbar-toggleable-sm {
-    bottom: 0;
-    display: none;
-    left: 0;
-    overflow-x: hidden;
-    position: fixed;
-    top: 0;
-    transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    width: 18.75rem;
-    z-index: 999; } }
+  /* Ensure icons are visible and appropriately sized on mobile */
+  .navbar-dropdown .navbar-logo img,
+  .navbar-dropdown .navbar-logo.mbr-iconfont {
+    display: inline-block; /* Ensure icons are displayed */
+    height: auto; /* Allow icons to resize automatically */
+    max-height: 2.5rem; /* Limit height to fit within the navbar */
+  }
+
+  .navbar-dropdown .navbar-caption {
+    font-size: 0.875rem; /* Adjust font size for readability */
+    line-height: 1.5rem !important; /* Adjust line height for proper alignment */
+  }
+
+  .nav-dropdown-sm .link,
+  .nav-dropdown-sm .dropdown-item {
+    padding: 0.75rem 1rem; /* Adjust padding for mobile view */
+    font-size: 0.875rem; /* Adjust font size for better readability */
+  }
+
+  .navbar-dropdown .hamburger-icon {
+    width: 20px; /* Increase width for better visibility */
+    box-shadow: 0 -4px 0 1px #282828, 0 0 0 1px #282828, 0 4px 0 1px #282828; /* Adjust shadow for better contrast */
+  }
+
+  .navbar-dropdown.navbar-toggleable-sm {
+    width: 100%; /* Ensure dropdown takes full width */
+    transform: none; /* Remove any unwanted transformations */
+  }
+}
+
 .nav-dropdown.navbar-toggleable-xl {
   bottom: 0;
   display: none;
