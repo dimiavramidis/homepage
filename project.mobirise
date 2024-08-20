@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Homepage",
-    "currentPage": "About.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "startm5",
       "title": "StartM5",
