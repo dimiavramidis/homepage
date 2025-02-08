@@ -1537,6 +1537,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 .cid-uynsptAXBt .embla__button:disabled {
   cursor: default;
@@ -1568,12 +1569,6 @@ a {
   cursor: grab;
 }
 .cid-uynsptAXBt .embla__viewport.is-dragging {
-  cursor: grabbing;
-}
-.cid-uynsptAXBt .embla__slide a {
-  cursor: grab;
-}
-.cid-uynsptAXBt .embla__slide a:active {
   cursor: grabbing;
 }
 .cid-uynsptAXBt .embla__container {
