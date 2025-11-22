@@ -1,284 +1,90 @@
 /* ===========================
-   Global Variables
+   HERO SECTION (layout + video)
    =========================== */
-:root {
-  /* AIONIO Brand Colors */
-  --aionio-white: #ffffff;
-  --aionio-light: #f5f5f5;
-  --aionio-grey: #c3c3c3;
-  --aionio-dark: #1f1f1f;
-  --aionio-black: #000000;
-  --aionio-primary: #19456f;
-  --aionio-primary-hover: #1f5a8d;
-  --aionio-primary-active: #133350;
-  --aionio-primary-light: #e7eef4;
-  --aionio-primary-dark: #0d2233;
-  --aionio-secondary: #ffc091;
-  --aionio-secondary-hover: #efa773;
-  --aionio-secondary-active: #c7763e;
-  --aionio-secondary-light: #fff6ef;
-  --aionio-secondary-dark: #82451b;
 
-  /* Font Family */
-  --aionio-font-family: "Inter", sans-serif;
-
-  --aionio-font-hero: 64px;
-  --aionio-font-h1: 48px;
-  --aionio-font-h2: 36px;
-  --aionio-font-h3: 28px;
-  --aionio-font-h4: 22px;
-  --aionio-font-h5: 18px;
-  --aionio-font-body: 16px;
-  --aionio-font-link: 18px;
-  --aionio-font-small: 14px;
-  --aionio-font-caption: 12px;
-
-  /* Font Weights */
-  --aionio-weight-regular: 400;
-  --aionio-weight-medium: 500;
-  --aionio-weight-semibold: 600;
-  --aionio-weight-bold: 700;
-
-  /* Shadows / Radius */
-  --aionio-radius: 8px;
-  --aionio-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 120px; /* space for navbar */
+  padding-bottom: 80px;
+  overflow: hidden;
+  color: var(--aionio-white);
 }
 
-body {
-  font-family: var(--aionio-font-family);
-  background: var(--aionio-white);
-  color: var(--aionio-dark);
-  margin: 0;
-  padding: 0;
+/* Background video wrapper */
+.hero-video-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: var(--aionio-font-h1);
+/* TRUE RESPONSIVE YOUTUBE BACKGROUND */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  border: 0;
+  transform: translate(-50%, -50%);
+  width: 177.78vh; /* 16:9 ratio based on height */
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw; /* 9:16 ratio based on width */
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Content always above video */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Typography inside hero */
+.hero-title {
+  font-size: var(--aionio-font-hero);
   font-weight: var(--aionio-weight-bold);
-}
-
-h2 {
-  font-size: var(--aionio-font-h2);
-  font-weight: var(--aionio-weight-semibold);
-}
-
-h3 {
-  font-size: var(--aionio-font-h3);
-  font-weight: var(--aionio-weight-semibold);
-}
-
-h4 {
-  font-size: var(--aionio-font-h4);
-  font-weight: var(--aionio-weight-semibold);
-}
-
-h5 {
-  font-size: var(--aionio-font-h5);
-  font-weight: var(--aionio-weight-semibold);
-}
-
-p {
-  font-size: var(--aionio-font-body);
-  font-weight: var(--aionio-weight-regular);
-}
-
-/* Links */
-a {
-  color: var(--aionio-primary);
-  font-size: var(--aionio-font-link);
-  font-weight: var(--aionio-weight-medium);
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-a:hover {
-  color: var(--aionio-primary-hover);
-}
-
-a:active {
-  color: var(--aionio-primary-active);
-}
-
-/* ===========================
-   Buttons
-   =========================== */
-/* Primary Button */
-.btn-aionio-primary {
-  background: var(--aionio-primary);
+  line-height: 1.1;
   color: var(--aionio-white);
-  border: none;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: var(--aionio-weight-medium);
-  border-radius: 6px;
-  transition: 0.2s ease;
 }
 
-.btn-aionio-primary:hover {
-  background: var(--aionio-primary-hover);
-}
-
-.btn-aionio-primary:active {
-  background: var(--aionio-primary-active);
-}
-
-/* Secondary Button */
-.btn-aionio-secondary {
-  background: var(--aionio-secondary);
-  color: var(--aionio-dark);
-  border: none;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: var(--aionio-weight-medium);
-  border-radius: 6px;
-  transition: 0.2s ease;
-}
-
-.btn-aionio-secondary:hover {
-  background: var(--aionio-secondary-hover);
-}
-
-.btn-aionio-secondary:active {
-  background: var(--aionio-secondary-active);
-}
-
-/* Outline Button */
-.btn-aionio-outline {
-  background: transparent;
-  color: var(--aionio-primary);
-  border: 2px solid var(--aionio-primary);
-  padding: 10px 26px;
-  font-size: 16px;
-  font-weight: var(--aionio-weight-medium);
-  border-radius: 6px;
-  transition: 0.2s ease;
-}
-
-.btn-aionio-outline:hover {
-  border-color: var(--aionio-primary-hover);
-  color: var(--aionio-primary-hover);
-}
-
-/* Text-Link Button */
-.btn-aionio-link {
-  background: transparent;
-  color: var(--aionio-primary);
-  border: none;
-  padding: 0;
-  font-weight: var(--aionio-weight-medium);
-  font-size: var(--aionio-font-link);
-}
-
-.btn-aionio-link:hover {
-  color: var(--aionio-primary-hover);
-}
-
-/* ===========================
-   Inputs / Textareas / Form Styling
-   =========================== */
-input,
-textarea {
-  font-family: var(--aionio-font-family);
-  font-size: var(--aionio-font-body);
-  border: 1px solid var(--aionio-grey);
-  border-radius: 6px;
-  padding: 12px 14px;
-  width: 100%;
-  transition: border 0.2s ease;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--aionio-primary);
-}
-
-/* ===========================
-   Navbar
-   =========================== */
-/* Default state: transparent */
-.aionio-navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  padding: 20px 0;
-  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
-  background: transparent;
-}
-
-/* Links */
-.aionio-navbar .nav-link {
-  color: var(--aionio-white);
-  font-size: 18px;
-  font-weight: var(--aionio-weight-medium);
-  margin-left: 32px;
-}
-
-.aionio-navbar .nav-link:hover {
+.hero-highlight {
   color: var(--aionio-secondary);
 }
 
-/* CTA Button */
-.aionio-navbar .btn-nav-cta {
-  background: var(--aionio-primary);
-  color: var(--aionio-white);
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: var(--aionio-weight-medium);
-  margin-left: 32px;
+.hero-subtitle {
+  font-size: var(--aionio-font-body);
+  color: var(--aionio-light);
+  max-width: 520px;
 }
 
-.aionio-navbar .btn-nav-cta:hover {
-  background: var(--aionio-primary-hover);
-}
-
-/* Logo */
-.aionio-logo {
-  height: 54px;
-}
-
-/* Scroll state: white background */
-.navbar-scrolled {
-  background: var(--aionio-white);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 12px 0;
-}
-
-/* Change colors when navbar is white */
-.navbar-scrolled .nav-link {
-  color: var(--aionio-dark);
-}
-
-.navbar-scrolled .nav-link:hover {
-  color: var(--aionio-primary);
-}
-
-.navbar-scrolled .btn-nav-cta {
-  background: var(--aionio-primary);
-  color: var(--aionio-white);
-}
-
-/* ===========================
-   Section
-   =========================== */
-.section {
-  padding: 80px 0;
-}
-
-.section-light {
-  background: var(--aionio-light);
-}
-
-.section-dark {
-  background: var(--aionio-dark);
-  color: var(--aionio-white);
-}
-
-/* Card */
-.card-aionio {
-  background: var(--aionio-white);
+.hero-card {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 20px;
   border-radius: var(--aionio-radius);
-  box-shadow: var(--aionio-shadow);
-  padding: 24px;
+}
+
+/* Code block inside card */
+.hero-code {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 12px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  color: var(--aionio-white);
+}
+
+.hero-card-note {
+  margin-top: 8px;
+  font-size: var(--aionio-font-small);
+  color: var(--aionio-light);
 }

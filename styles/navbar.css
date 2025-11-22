@@ -1,0 +1,99 @@
+/* ===========================
+   AIONIO Navbar
+   =========================== */
+
+/* Base navbar (initial state, transparent over hero/video) */
+.aionio-navbar {
+  padding: 14px 0;
+  background: transparent;
+  transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo */
+.aionio-logo {
+  height: 48px;
+}
+
+/* ============================================
+   NAV LINKS — DEFAULT (dark over hero)
+   ============================================ */
+
+/* override Bootstrap: .navbar-dark .navbar-nav .nav-link */
+.aionio-navbar.navbar-dark .navbar-nav .nav-link {
+  color: var(--aionio-white);
+  font-size: 16px;
+  font-weight: var(--aionio-weight-medium);
+  margin-left: 28px;
+  transition: 0.2s ease;
+}
+
+.aionio-navbar.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--aionio-secondary);
+}
+
+/* ============================================
+   SCROLLED + MOBILE-OPEN (white navbar)
+   ============================================ */
+
+/* base white background when scrolled OR mobile menu open */
+.aionio-navbar.navbar-scrolled,
+.aionio-navbar.mobile-open {
+  background: var(--aionio-white) !important;
+  box-shadow: var(--aionio-shadow);
+  padding: 10px 0;
+}
+
+/* dark links on white background (scrolled or mobile-open) */
+.aionio-navbar.navbar-scrolled .navbar-nav .nav-link,
+.aionio-navbar.mobile-open .navbar-nav .nav-link {
+  color: var(--aionio-dark) !important;
+}
+
+.aionio-navbar.navbar-scrolled .navbar-nav .nav-link:hover,
+.aionio-navbar.mobile-open .navbar-nav .nav-link:hover {
+  color: var(--aionio-primary) !important;
+}
+
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+
+.btn-nav-cta {
+  background: var(--aionio-primary);
+  color: var(--aionio-light);
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: var(--aionio-weight-semibold);
+  transition: 0.2s ease;
+  border: none;
+}
+
+.btn-nav-cta:hover {
+  background: var(--aionio-primary-hover);
+}
+
+/* CTA button when navbar is white (scrolled or mobile-open) */
+.aionio-navbar.navbar-scrolled .btn-nav-cta,
+.aionio-navbar.mobile-open .btn-nav-cta {
+  background: var(--aionio-primary);
+  color: var(--aionio-white);
+}
+
+.aionio-navbar.navbar-scrolled .btn-nav-cta:hover,
+.aionio-navbar.mobile-open .btn-nav-cta:hover {
+  background: var(--aionio-primary-hover);
+}
+
+/* ============================================
+   MOBILE NAV TOGGLER
+   ============================================ */
+
+/* Toggler border */
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Toggler icon visible on dark background */
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
+}
