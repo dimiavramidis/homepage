@@ -1,17 +1,21 @@
 /* ===========================
-   HERO SECTION (layout + video)
+   hero-banner
    =========================== */
-
 .hero {
   position: relative;
   min-height: 100vh;
-  padding-top: 120px; /* space for navbar */
-  padding-bottom: 80px;
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+  padding-bottom: 40px;
   color: var(--aionio-white);
+  box-sizing: border-box;
 }
 
-/* Background video wrapper */
+/* VIDEO BACKGROUND */
 .hero-video-container {
   position: absolute;
   inset: 0;
@@ -19,72 +23,150 @@
   overflow: hidden;
 }
 
-/* TRUE RESPONSIVE YOUTUBE BACKGROUND */
 .hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  pointer-events: none;
-  border: 0;
   transform: translate(-50%, -50%);
-  width: 177.78vh; /* 16:9 ratio based on height */
+  width: 177.78vh;
   height: 100vh;
   min-width: 100vw;
-  min-height: 56.25vw; /* 9:16 ratio based on width */
+  min-height: 56.25vw;
+  pointer-events: none;
+  border: 0;
 }
 
-/* Dark overlay */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
-/* Content always above video */
+/* CONTENT */
 .hero-content {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-/* Typography inside hero */
-.hero-title {
-  font-size: var(--aionio-font-hero);
+/* TYPOGRAPHY */
+.hero-title,
+.hero-subtitle {
+  color: var(--aionio-secondary);
   font-weight: var(--aionio-weight-bold);
   line-height: 1.1;
-  color: var(--aionio-white);
 }
 
-.hero-highlight {
-  color: var(--aionio-secondary);
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3.6rem);
 }
 
 .hero-subtitle {
-  font-size: var(--aionio-font-body);
-  color: var(--aionio-light);
-  max-width: 520px;
+  font-size: clamp(1.3rem, 2.4vw, 2.1rem);
 }
 
-.hero-card {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 20px;
-  border-radius: var(--aionio-radius);
+.hero-text {
+  max-width: 70%;
 }
 
-/* Code block inside card */
-.hero-code {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 12px;
-  border-radius: 6px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-size: 14px;
-  white-space: pre-wrap;
-  color: var(--aionio-white);
+.btn-hero {
+  width: auto;
+  align-self: flex-start;
+  padding: 10px 26px;
 }
 
-.hero-card-note {
-  margin-top: 8px;
-  font-size: var(--aionio-font-small);
-  color: var(--aionio-light);
+/* ===========================
+   services
+   =========================== */
+/* Card styling */
+.service-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  margin: 0 auto; /* center it */
+}
+
+/* Image fix */
+.service-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#services .card-body {
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
+/* Card content */
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--aionio-black);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: var(--aionio-dark);
+}
+
+/* ===========================
+   industry
+   =========================== */
+
+.industry-card {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 116, 139, 0.2),
+    rgba(45, 66, 95, 0.1)
+  );
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.industry-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.9;
+   filter: brightness(0) saturate(100%) invert(78%) sepia(3%) saturate(0%) hue-rotate(202deg) brightness(88%) contrast(90%);
+
+}
+
+/* ===========================
+   Responsive: (screen < 768)
+   =========================== */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* να μπορεί να “ψηλώσει” αν χρειαστεί */
+    min-height: 100vh;
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+
+  .hero-content {
+    align-items: center; /* κεντράρει ΟΛΑ τα παιδιά στον άξονα X */
+    text-align: center; /* κεντράρει το κείμενο */
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .btn-hero {
+    align-self: center;
+  }
 }

@@ -99,6 +99,11 @@ a:active {
   color: var(--aionio-primary-active);
 }
 
+.bg-primary-dark {
+  background: var(--aionio-primary-dark);
+  color: var(--aionio-white);
+}
+
 /* ===========================
    Buttons
    =========================== */
@@ -159,6 +164,26 @@ a:active {
   color: var(--aionio-primary-hover);
 }
 
+.btn-aionio-outline-secondary {
+  background: rgba(255, 192, 145, 0.15);
+  color: var(--aionio-light);
+  border: 2px solid var(--aionio-secondary);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: var(--aionio-weight-medium);
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.btn-aionio-outline-secondary:hover {
+  border-color: var(--aionio-secondary-hover);
+  background-color: #b48868;
+}
+
+.btn-aionio-outline-secondary:active {
+  color: var(--aionio-dark);
+}
+
 /* Text-Link Button */
 .btn-aionio-link {
   background: transparent;
@@ -191,4 +216,11 @@ input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--aionio-primary);
+}
+
+/* ===========================
+   Inputs / Textareas / Form Styling
+   =========================== */
+.section {
+  padding: 96px 0;
 }
