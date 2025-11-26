@@ -170,6 +170,22 @@
 }
 
 /* ===========================
+   Service page
+   =========================== */
+.aionio-main {
+  padding-top: 5rem;
+}
+
+/* .service-section + .service-section {
+  border-top: 1px solid #e5e7eb;
+} */
+
+.service-image {
+  max-height: 380px;
+  object-fit: cover;
+}
+
+/* ===========================
    Responsive: (screen < 768)
    =========================== */
 @media (max-width: 768px) {

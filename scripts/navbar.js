@@ -14,9 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------
+  // Flag: σελίδα με ΠΑΝΤΑ solid navbar;
+  // ---------------------------
+  const alwaysSolid = document.body.classList.contains("navbar-always-solid");
+
+  // Αν είναι πάντα solid, φρόντισε να έχει από την αρχή το scrolled style
+  if (alwaysSolid && navbar) {
+    navbar.classList.add("navbar-scrolled");
+  }
+
+  // ---------------------------
   // Scroll behavior
   // ---------------------------
   const handleScroll = () => {
+    // Στις σελίδες alwaysSolid δεν αλλάζουμε τίποτα στο scroll
+    if (alwaysSolid || !navbar) return;
+
     if (window.scrollY > 40) {
       navbar.classList.add("navbar-scrolled");
     } else {
@@ -34,9 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------
   // Mobile menu open/close
   // ---------------------------
-  if (toggler && collapse) {
+  if (toggler && collapse && navbar) {
     toggler.addEventListener("click", () => {
       const isOpen = collapse.classList.contains("show");
+
+      // Αν είμαστε σε σελίδα alwaysSolid → δεν χρειάζεται mobile-open,
+      // το navbar είναι ήδη με background.
+      if (alwaysSolid) {
+        return;
+      }
 
       if (!isOpen) {
         // Menu is about to OPEN → force white navbar for readability
