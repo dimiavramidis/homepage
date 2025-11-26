@@ -177,6 +177,7 @@ a:active {
 
 .btn-aionio-outline-secondary:hover {
   border-color: var(--aionio-secondary-hover);
+  color: var(--aionio-light);
   background-color: #b48868;
 }
 
@@ -222,5 +223,16 @@ textarea:focus {
    Inputs / Textareas / Form Styling
    =========================== */
 .section {
-  padding: 96px 0;
+  padding: 6rem 0;
+}
+
+.section-title {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .section {
+    padding: 3rem 0;
+  }
 }

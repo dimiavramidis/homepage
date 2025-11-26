@@ -142,8 +142,31 @@
   height: 60px;
   object-fit: contain;
   opacity: 0.9;
-   filter: brightness(0) saturate(100%) invert(78%) sepia(3%) saturate(0%) hue-rotate(202deg) brightness(88%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(78%) sepia(3%) saturate(0%)
+    hue-rotate(202deg) brightness(88%) contrast(90%);
+}
 
+/* ===========================
+   Partners section
+   =========================== */
+.partner-image {
+  max-width: 300px;
+  object-fit: contain;
+}
+
+/* ===========================
+   Contact section
+   =========================== */
+.contact-form {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact .form-control {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 /* ===========================
@@ -168,5 +191,9 @@
 
   .btn-hero {
     align-self: center;
+  }
+
+  .partners-container {
+    gap: 5rem;
   }
 }

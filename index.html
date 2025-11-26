@@ -27,9 +27,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <!-- AIONIO styles -->
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
@@ -63,26 +70,28 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="#hero">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#features">Services</a>
+              <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">Expertise</a>
+              <a class="nav-link" href="about.html">Expertise</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog</a>
+              <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-              <a class="btn btn-nav-cta" href="#cta">Get in touch</a>
+              <a class="btn btn-nav-cta" href="contact.html">Get in touch</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
+
+    <main>
+          <!-- Hero Section -->
     <section id="hero" class="hero">
       <!-- YouTube Background -->
       <div class="hero-video-container" aria-hidden="true">
@@ -93,6 +102,7 @@
           frameborder="0"
           allow="autoplay; encrypted-media"
           allowfullscreen
+          loading="lazy"
         ></iframe>
       </div>
 
@@ -108,23 +118,22 @@
           driving business value, and creating sustainable solutions.
         </p>
 
-        <button
+        <a
+        href="contact.html"
           class="btn-hero btn-aionio-outline-secondary mt-3"
           type="button"
         >
           Let’s talk
-        </button>
+        </a>
       </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="section">
       <div class="container">
-        <div class="text-center">
-          <h2>Services</h2>
-        </div>
+        <h2 class="section-title">Services</h2>
 
-        <div class="row g-5 mt-3">
+        <div class="row g-5">
           <!-- Service 1 -->
           <div class="col-md-6 col-lg-6">
             <div class="service-card card h-100">
@@ -210,202 +219,272 @@
     <!-- Industry Section -->
     <section id="industry" class="section bg-primary-dark">
       <div class="container">
-        <div class="text-center">
-          <h2>Industry Sectors</h2>
+        <h2 class="section-title">Industry Sectors</h2>
 
-          <div class="row g-5 mt-3">
-            <!-- Card Component Example -->
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/logistics.svg"
-                  alt="Logistics Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">Logistics</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
+        <div class="row g-5">
+          <!-- Card Component Example -->
+          <div class="col-md-6 col-lg-4">
+            <div class="industry-card p-4 rounded-4 h-100 text-center">
+              <img
+                src="assets/images/icons/logistics.svg"
+                alt="Logistics Icon"
+                class="industry-icon mx-auto mb-3"
+              />
+              <h5 class="fw-semibold">Logistics</h5>
+              <p class="text-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis tortor.
+              </p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/esg.svg"
-                  alt="ESG Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">ESG Sustainability</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="industry-card p-4 rounded-4 h-100 text-center">
+              <img
+                src="assets/images/icons/esg.svg"
+                alt="ESG Icon"
+                class="industry-icon mx-auto mb-3"
+              />
+              <h5 class="fw-semibold">ESG Sustainability</h5>
+              <p class="text-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis tortor.
+              </p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/pharma.svg"
-                  alt="Pharma Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">Pharma</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="industry-card p-4 rounded-4 h-100 text-center">
+              <img
+                src="assets/images/icons/pharma.svg"
+                alt="Pharma Icon"
+                class="industry-icon mx-auto mb-3"
+              />
+              <h5 class="fw-semibold">Pharma</h5>
+              <p class="text-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis tortor.
+              </p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/energy.svg"
-                  alt="Energy Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">Energy</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="industry-card p-4 rounded-4 h-100 text-center">
+              <img
+                src="assets/images/icons/energy.svg"
+                alt="Energy Icon"
+                class="industry-icon mx-auto mb-3"
+              />
+              <h5 class="fw-semibold">Energy</h5>
+              <p class="text-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis tortor.
+              </p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/social.svg"
-                  alt="Social Media Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">Social Media</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="industry-card p-4 rounded-4 h-100 text-center">
+              <img
+                src="assets/images/icons/social.svg"
+                alt="Social Media Icon"
+                class="industry-icon mx-auto mb-3"
+              />
+              <h5 class="fw-semibold">Social Media</h5>
+              <p class="text-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis tortor.
+              </p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/finance.svg"
-                  alt="Finance Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">Finance</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="industry-card p-4 rounded-4 h-100 text-center">
+              <img
+                src="assets/images/icons/finance.svg"
+                alt="Finance Icon"
+                class="industry-icon mx-auto mb-3"
+              />
+              <h5 class="fw-semibold">Finance</h5>
+              <p class="text-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                convallis tortor.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="section section-light">
+    <!-- Partners Section-->
+    <section id="partners" class="section">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2>What you can build with AIONIO</h2>
-          <p class="section-subtitle">
-            Πάρε ιδέες από τα projects σου και κάν’ τα επίσημα AIONIO use cases.
-          </p>
-        </div>
+        <h2 class="section-title">Partners</h2>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <div class="card-aionio h-100">
-              <h4>Traffic Dashboards</h4>
-              <p>
-                Mapbox-based monitoring, rush hour analytics, events & speed
-                visualizations με REST APIs και PostgreSQL.
-              </p>
-            </div>
-          </div>
+        <!-- assets\images\alphahelden-internationa-logo01-2-400x348.png -->
+        <!-- assets\images\aws-logo4-290x174.png -->
+        <div
+          class="d-flex flex-wrap justify-content-around align-items-center partners-container"
+        >
+          <img
+            src="assets/images/alphahelden-internationa-logo01-2-400x348.png"
+            alt="AlphaHelden International"
+            class="partner-image"
+          />
 
-          <div class="col-md-6 col-lg-4">
-            <div class="card-aionio h-100">
-              <h4>Football Analytics</h4>
-              <p>
-                Sofascore imports, match stats, shotmaps, scenarios, player
-                heatmaps. Όλα οργανωμένα σε δικό σου data model.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card-aionio h-100">
-              <h4>AI Assistants & Tools</h4>
-              <p>
-                SAP helpers, glossary tools, automations γύρω από κείμενα,
-                reports και workflows με ChatGPT στο κέντρο.
-              </p>
-            </div>
-          </div>
+          <img
+            src="assets/images/aws-logo4-290x174.png"
+            alt="AWS"
+            class="partner-image"
+          />
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section section-dark">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <h2>AIONIO is your long-term lab.</h2>
-            <p>
-              Ξεκίνησε από side projects, αλλά η λογική είναι σοβαρή: ένα μέρος
-              όπου όλα τα πειράματά σου (κώδικας, δεδομένα, automations) δένουν
-              σε ένα ενιαίο σύστημα.
-            </p>
-            <p>
-              Καθαρό HTML, Bootstrap, React frontends, Node/Express backends,
-              PostgreSQL, Mapbox, Sofascore imports – όλα παίζουν ρόλο εδώ.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <div class="card-aionio">
-              <h4 class="mb-3">Current focus areas</h4>
-              <ul class="about-list">
-                <li>⚽ Football data platform (tournaments, matches, stats)</li>
-                <li>🗺 Traffic analytics dashboards με Mapbox</li>
-                <li>🧠 SAP learning helpers & tools</li>
-                <li>📊 Generic monitoring / reporting workflows</li>
-                <li>🤖 ChatGPT-powered data transformations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call To Action -->
-    <section id="cta" class="section section-light">
+    <!-- Contact -->
+    <section id="contact" class="section bg-primary-dark">
       <div class="container text-center">
-        <h2>Ready to turn this into your hub?</h2>
-        <p class="section-subtitle mb-4">
-          Χρησιμοποίησέ το σαν βάση για demos, docs, blog, portfolio και
-          internal tools.
+        <h2>Get In Touch</h2>
+        <p>
+          Use this form to reach out about job opportunities, consultation
+          requests, or to network.
         </p>
-        <button class="btn-aionio-primary">Back to top</button>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-12 col-md-6 col-lg-5">
+            <form>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Name"
+                  aria-label="Name"
+                />
+              </div>
+
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                  aria-label="Email"
+                />
+              </div>
+
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Message"
+                  aria-label="Message"
+                ></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn-aionio-primary">
+                  Send message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
+
+    </main>
+
 
     <!-- Footer -->
-    <footer class="py-4">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
-      >
-        <span>© <span id="year"></span> AIONIO. All rights reserved.</span>
-        <span class="small text-muted"
-          >Built with Bootstrap & AIONIO design system.</span
+    <footer class="aionio-footer">
+      <!-- Top footer -->
+      <div class="footer-top">
+        <div class="container py-5">
+          <div class="row gy-4 align-items-start">
+            <!-- Logo & contact -->
+            <div class="col-md-6 col-lg-5">
+              <div class="mb-3">
+                <img
+                  src="assets/images/aionio-logo-removebg-preview-210x67.png"
+                  alt="AIONIO"
+                  class="footer-logo"
+                />
+              </div>
+
+              <ul class="footer-contact list-unstyled mb-0">
+                <li>
+                  <span class="footer-icon"
+                    ><i class="fa-solid fa-location-dot"></i>
+                  </span>
+                  5436 Würenlos, Switzerland
+                </li>
+                <li>
+                  <span class="footer-icon"
+                    ><i class="fa-solid fa-envelope"></i
+                  ></span>
+                  <a href="mailto:dimitrios.avramidis@aionio.eu">
+                    dimitrios.avramidis@aionio.eu
+                  </a>
+                </li>
+                <li>
+                  <span class="footer-icon"
+                    ><i class="fa-solid fa-phone"></i>
+                  </span>
+                  +41 763109934
+                </li>
+                <li class="mt-2 footer-social">
+                  <a href="#" aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" aria-label="GitHub"
+                    ><i class="fa-brands fa-git-alt"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Links -->
+            <div class="col-6 col-md-3 col-lg-2">
+              <h5>Links</h5>
+              <ul class="list-unstyled footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">Expertise</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="col-6 col-md-3 col-lg-3 ms-auto">
+              <h5>Get in touch</h5>
+              <p class="footer-text">
+                Have a question or a project in mind?<br />
+                We’d love to hear from you.
+              </p>
+              <a href="contact.html" class="footer-cta"> Let’s talk </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-wrap justify-content-center align-items-center gap-2 py-3"
         >
+          <ul
+            class="footer-bottom-links list-unstyled d-flex flex-wrap gap-3 mb-0"
+          >
+            <li>© <span id="year"></span> AIONIO</li>
+            <li><a href="impressum.html">Imprint</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li>
+              <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
 
