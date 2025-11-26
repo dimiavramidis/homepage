@@ -82,7 +82,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--aionio-primary);
+  color: var(--aionio-primary-hover);
 }
 
 .footer-text {
@@ -101,13 +101,13 @@
   transition: 0.2s ease;
   display: inline-block;
   margin-top: 0.5rem;
-  text-decoration: none;  /* remove underline on idle */
+  text-decoration: none; /* remove underline on idle */
 }
 
 .footer-cta:hover {
   background: var(--aionio-primary-hover);
-  color: var(--aionio-white);   /* important for link hover */
-  text-decoration: none;        /* ensure no underline */
+  color: var(--aionio-white); /* important for link hover */
+  text-decoration: none; /* ensure no underline */
 }
 
 /* ===========================
@@ -129,7 +129,7 @@
 }
 
 .footer-bottom a:hover {
-  color: var(--aionio-secondary);
+  color: var(--aionio-primary-hover);
 }
 
 .footer-bottom-text {
@@ -145,7 +145,11 @@
 .footer-bottom-links li:first-child {
   border-left: none;
 }
-
+/* Mobile-only links (hidden by default) */
+.links-mobile {
+  display: none;
+  margin-top: 0.75rem;
+}
 /* ===========================
    Responsive
    =========================== */
@@ -163,8 +167,28 @@
     justify-content: center;
   }
 
-  .footer-bottom-links li {
-    border-left: none; /* remove separators on mobile */
-    padding: 0 0.5rem;
+}
+
+@media (max-width: 575px) {
+  .footer-top .container {
+    padding: 3rem;
+  }
+
+  .footer-bottom {
+    padding: 0;
+  }
+
+  .footer-contact li {
+    justify-content: flex-start;
+  }
+
+  /* Mobile-only links εμφανίζονται */
+  .links-mobile {
+    display: block;
+  }
+
+  /* Στο bottom footer φαίνεται μόνο το © AIONIO */
+  .footer-bottom-links li:not(:first-child) {
+    display: none;
   }
 }
