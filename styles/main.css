@@ -180,9 +180,23 @@
   border-top: 1px solid #e5e7eb;
 } */
 
+/* ===========================
+   Blog page
+   =========================== */
 .service-image {
   max-height: 380px;
   object-fit: cover;
+}
+
+.blog-img-uniform {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.blog-img-db {
+  object-position: left center;
 }
 
 /* ===========================

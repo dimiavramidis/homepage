@@ -149,8 +149,7 @@ a:active {
 
 /* Outline Button */
 .btn-aionio-outline {
-  background: transparent;
-  color: var(--aionio-primary);
+  color: var(--aionio-dark);
   border: 2px solid var(--aionio-primary);
   padding: 10px 26px;
   font-size: 16px;
@@ -160,8 +159,12 @@ a:active {
 }
 
 .btn-aionio-outline:hover {
-  border-color: var(--aionio-primary-hover);
-  color: var(--aionio-primary-hover);
+  background: var(--aionio-primary);
+  color: var(--aionio-light);
+}
+
+.btn-aionio-outline:active {
+  color: var(--aionio-dark);
 }
 
 .btn-aionio-outline-secondary {
