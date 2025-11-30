@@ -234,6 +234,10 @@ textarea:focus {
   text-align: center;
 }
 
+hr.space-hr-line {
+    margin: 2rem 0;
+}
+
 @media (max-width: 991px) {
   .section {
     padding: 3rem 0;
