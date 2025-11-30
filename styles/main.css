@@ -9,8 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 80px;
-  padding-bottom: 40px;
   color: var(--aionio-white);
   box-sizing: border-box;
 }
@@ -19,15 +17,26 @@
 .hero-video-container {
   position: absolute;
   inset: 0;
-  z-index: 0;
   overflow: hidden;
+  z-index: 0;
+}
+
+.hero-video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, #041423 0%, rgba(4, 20, 35, 0) 100%);
+  z-index: 1;
 }
 
 .hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -52%);
   width: 177.78vh;
   height: 100vh;
   min-width: 100vw;
@@ -43,6 +52,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  padding-top: 80px; 
+  padding-bottom: 40px;
 }
 
 /* TYPOGRAPHY */
@@ -176,10 +187,6 @@
   padding-top: 5rem;
 }
 
-/* .service-section + .service-section {
-  border-top: 1px solid #e5e7eb;
-} */
-
 /* ===========================
    Blog page
    =========================== */
@@ -206,7 +213,7 @@
   background-color: var(--aionio-primary-light);
 }
 
-/* Icon circles στην αριστερή κάρτα */
+/* Icon circles left card */
 .contact-card-icon {
   width: 2.3rem;
   height: 2.3rem;
@@ -223,8 +230,7 @@
   border-radius: 0.75rem;
 }
 
-/* Social icons μέσα στην contact card */
-/* Social icons στην contact card – ίδια με το footer */
+/* Social icons contact card */
 .contact-social a {
   font-size: 1.4rem;
   color: var(--aionio-dark);
@@ -237,13 +243,12 @@
   color: var(--aionio-primary);
 }
 
-/* Φόρμα πιο στενή */
+/* Form */
 .form-narrow {
   max-width: 480px;
   width: 100%;
 }
 
-/* Inputs λίγο πιο compact */
 .form-narrow .form-control {
   padding-top: 0.55rem;
   padding-bottom: 0.55rem;
@@ -269,7 +274,7 @@
 .expertise-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Κόβει άψογα */
+  object-fit: cover; 
 }
 
 /* ===========================
@@ -279,15 +284,15 @@
 .timeline {
   position: relative;
   list-style: none;
-  padding-left: 48px; /* Απόσταση κάρτας από τη γραμμή */
+  padding-left: 48px; 
 }
 
 /* Κάθετη γραμμή */
 .timeline::before {
   content: "";
   position: absolute;
-   top: 30px;      /* αρχίζει κοντά στο πρώτο dot */
-  bottom: 30px;   /* τελειώνει κοντά στο τελευταίο dot */
+  top: 30px; 
+  bottom: 30px; 
   left: 24px;
   width: 2px;
   background: hsl(0, 0%, 85%);
@@ -303,25 +308,25 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Timeline dot (ΜΟΝΟ αυτό — όχι δεύτερο!) */
+/* Timeline dot */
 .timeline .timeline-item::before {
   content: "";
   position: absolute;
-   left: -29px;
-  top: 30px;       /* Ύψος του dot (ρύθμισε αν χρειάζεται) */
+  left: -29px;
+  top: 30px; 
   width: 12px;
   height: 12px;
   background: var(--aionio-primary);
   border-radius: 50%;
 }
 
-/* Ημερομηνία */
+/* Date */
 .timeline-date {
   font-size: var(--aionio-font-small);
   color: var(--aionio-dark);
 }
 
-/* Τίτλος "Achievements" */
+/* "Achievements" */
 .achievements {
   font-weight: 500;
 }
@@ -338,40 +343,36 @@
 
 .ach-list li {
   position: relative;
-  padding-left: 22px;     /* Απόσταση κειμένου από το dot */
-  margin-bottom: 6px;     /* Κάθετο κενό μεταξύ bullet lines */
+  padding-left: 22px;
+  margin-bottom: 6px;
 }
 
 .ach-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 7px;               /* Κεντράρισμα του dot με τη γραμμή του κειμένου */
-  width: 7px;             /* Μέγεθος full dot */
+  top: 7px; 
+  width: 7px;
   height: 7px;
   border-radius: 50%;
   background: var(--aionio-primary);
 }
-
-
-
 
 /* ===========================
    Responsive: (screen < 768)
    =========================== */
 @media (max-width: 768px) {
   .hero {
-    height: auto; /* να μπορεί να “ψηλώσει” αν χρειαστεί */
+    height: auto;
     min-height: 100vh;
-    padding-top: 96px;
-    padding-bottom: 32px;
   }
 
   .hero-content {
-    align-items: center; /* κεντράρει ΟΛΑ τα παιδιά στον άξονα X */
-    text-align: center; /* κεντράρει το κείμενο */
+    align-items: center;
+    text-align: center;
+    padding-top: 96px;
+    padding-bottom: 32px;
   }
-
   .hero-text {
     max-width: 100%;
   }
