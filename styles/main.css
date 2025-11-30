@@ -1,0 +1,392 @@
+/* ===========================
+   hero-banner
+   =========================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  color: var(--aionio-white);
+  box-sizing: border-box;
+}
+
+/* VIDEO BACKGROUND */
+.hero-video-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw;
+  pointer-events: none;
+  border: 0;
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* TYPOGRAPHY */
+.hero-title,
+.hero-subtitle {
+  color: var(--aionio-secondary);
+  font-weight: var(--aionio-weight-bold);
+  line-height: 1.1;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+}
+
+.hero-text {
+  max-width: 70%;
+}
+
+.btn-hero {
+  width: auto;
+  align-self: flex-start;
+  padding: 10px 26px;
+}
+
+/* ===========================
+   services
+   =========================== */
+/* Card styling */
+.service-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  margin: 0 auto; /* center it */
+}
+
+/* Image fix */
+.service-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#services .card-body {
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
+/* Card content */
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--aionio-black);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: var(--aionio-dark);
+}
+
+/* ===========================
+   industry
+   =========================== */
+
+.industry-card {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 116, 139, 0.2),
+    rgba(45, 66, 95, 0.1)
+  );
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.industry-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: brightness(0) saturate(100%) invert(78%) sepia(3%) saturate(0%)
+    hue-rotate(202deg) brightness(88%) contrast(90%);
+}
+
+/* ===========================
+   Partners section
+   =========================== */
+.partner-image {
+  max-width: 300px;
+  object-fit: contain;
+}
+
+/* ===========================
+   Contact section
+   =========================== */
+.contact-form {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact .form-control {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* ===========================
+   Service page
+   =========================== */
+.aionio-main {
+  padding-top: 5rem;
+}
+
+/* .service-section + .service-section {
+  border-top: 1px solid #e5e7eb;
+} */
+
+/* ===========================
+   Blog page
+   =========================== */
+.service-image {
+  max-height: 380px;
+  object-fit: cover;
+}
+
+.blog-img-uniform {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.blog-img-db {
+  object-position: left center;
+}
+
+/* ===========================
+   Contact
+   =========================== */
+.bg-contact {
+  background-color: var(--aionio-primary-light);
+}
+
+/* Icon circles στην αριστερή κάρτα */
+.contact-card-icon {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 999px;
+  background-color: #f3f4f6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* Card styling */
+.contact-card {
+  border-radius: 0.75rem;
+}
+
+/* Social icons μέσα στην contact card */
+/* Social icons στην contact card – ίδια με το footer */
+.contact-social a {
+  font-size: 1.4rem;
+  color: var(--aionio-dark);
+  margin-right: 0.6rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-social a:hover {
+  color: var(--aionio-primary);
+}
+
+/* Φόρμα πιο στενή */
+.form-narrow {
+  max-width: 480px;
+  width: 100%;
+}
+
+/* Inputs λίγο πιο compact */
+.form-narrow .form-control {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  font-size: 0.92rem;
+}
+
+/* Map section */
+.contact-map-section {
+  background-color: #ffffff;
+}
+
+/* ===========================
+   Expertise
+   =========================== */
+.expertise-photo-box {
+  width: 420px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.expertise-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Κόβει άψογα */
+}
+
+/* ===========================
+   TIMELINE
+   =========================== */
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding-left: 48px; /* Απόσταση κάρτας από τη γραμμή */
+}
+
+/* Κάθετη γραμμή */
+.timeline::before {
+  content: "";
+  position: absolute;
+   top: 30px;      /* αρχίζει κοντά στο πρώτο dot */
+  bottom: 30px;   /* τελειώνει κοντά στο τελευταίο dot */
+  left: 24px;
+  width: 2px;
+  background: hsl(0, 0%, 85%);
+}
+
+/* Κάρτα */
+.timeline .timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding: 25px;
+  background-color: var(--aionio-primary-light);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Timeline dot (ΜΟΝΟ αυτό — όχι δεύτερο!) */
+.timeline .timeline-item::before {
+  content: "";
+  position: absolute;
+   left: -29px;
+  top: 30px;       /* Ύψος του dot (ρύθμισε αν χρειάζεται) */
+  width: 12px;
+  height: 12px;
+  background: var(--aionio-primary);
+  border-radius: 50%;
+}
+
+/* Ημερομηνία */
+.timeline-date {
+  font-size: var(--aionio-font-small);
+  color: var(--aionio-dark);
+}
+
+/* Τίτλος "Achievements" */
+.achievements {
+  font-weight: 500;
+}
+
+/* ===========================
+   ACHIEVEMENTS LIST (FULL DOTS)
+   =========================== */
+
+.ach-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.ach-list li {
+  position: relative;
+  padding-left: 22px;     /* Απόσταση κειμένου από το dot */
+  margin-bottom: 6px;     /* Κάθετο κενό μεταξύ bullet lines */
+}
+
+.ach-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;               /* Κεντράρισμα του dot με τη γραμμή του κειμένου */
+  width: 7px;             /* Μέγεθος full dot */
+  height: 7px;
+  border-radius: 50%;
+  background: var(--aionio-primary);
+}
+
+
+
+
+/* ===========================
+   Responsive: (screen < 768)
+   =========================== */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* να μπορεί να “ψηλώσει” αν χρειαστεί */
+    min-height: 100vh;
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+
+  .hero-content {
+    align-items: center; /* κεντράρει ΟΛΑ τα παιδιά στον άξονα X */
+    text-align: center; /* κεντράρει το κείμενο */
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .btn-hero {
+    align-self: center;
+  }
+
+  .partners-container {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .form-narrow {
+    max-width: 100% !important;
+  }
+}

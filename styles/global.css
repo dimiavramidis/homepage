@@ -1,0 +1,245 @@
+/* ===========================
+   Global Variables
+   =========================== */
+:root {
+  /* AIONIO Brand Colors */
+  --aionio-white: #ffffff;
+  --aionio-light: #f5f5f5;
+  --aionio-grey: #c3c3c3;
+  --aionio-dark: #1f1f1f;
+  --aionio-black: #000000;
+  --aionio-primary: #19456f;
+  --aionio-primary-hover: #1f5a8d;
+  --aionio-primary-active: #133350;
+  --aionio-primary-light: #e7eef4;
+  --aionio-primary-dark: #0d2233;
+  --aionio-secondary: #ffc091;
+  --aionio-secondary-hover: #efa773;
+  --aionio-secondary-active: #c7763e;
+  --aionio-secondary-light: #fff6ef;
+  --aionio-secondary-dark: #82451b;
+
+  /* Font Family */
+  --aionio-font-family: "Inter", sans-serif;
+
+  --aionio-font-hero: 64px;
+  --aionio-font-h1: 48px;
+  --aionio-font-h2: 36px;
+  --aionio-font-h3: 28px;
+  --aionio-font-h4: 22px;
+  --aionio-font-h5: 18px;
+  --aionio-font-body: 16px;
+  --aionio-font-link: 18px;
+  --aionio-font-small: 14px;
+  --aionio-font-caption: 12px;
+
+  /* Font Weights */
+  --aionio-weight-regular: 400;
+  --aionio-weight-medium: 500;
+  --aionio-weight-semibold: 600;
+  --aionio-weight-bold: 700;
+
+  /* Shadows / Radius */
+  --aionio-radius: 8px;
+  --aionio-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: var(--aionio-font-family);
+  background: var(--aionio-white);
+  color: var(--aionio-dark);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--aionio-font-h1);
+  font-weight: var(--aionio-weight-bold);
+}
+
+h2 {
+  font-size: var(--aionio-font-h2);
+  font-weight: var(--aionio-weight-semibold);
+}
+
+h3 {
+  font-size: var(--aionio-font-h3);
+  font-weight: var(--aionio-weight-semibold);
+}
+
+h4 {
+  font-size: var(--aionio-font-h4);
+  font-weight: var(--aionio-weight-semibold);
+}
+
+h5 {
+  font-size: var(--aionio-font-h5);
+  font-weight: var(--aionio-weight-semibold);
+}
+
+p {
+  font-size: var(--aionio-font-body);
+  font-weight: var(--aionio-weight-regular);
+}
+
+/* Links */
+a {
+  color: var(--aionio-primary);
+  font-size: var(--aionio-font-link);
+  font-weight: var(--aionio-weight-medium);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: var(--aionio-primary-hover);
+}
+
+a:active {
+  color: var(--aionio-primary-active);
+}
+
+.bg-primary-dark {
+  background: var(--aionio-primary-dark);
+  color: var(--aionio-white);
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+/* Primary Button */
+.btn-aionio-primary {
+  background: var(--aionio-primary);
+  color: var(--aionio-white);
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: var(--aionio-weight-medium);
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.btn-aionio-primary:hover {
+  background: var(--aionio-primary-hover);
+}
+
+.btn-aionio-primary:active {
+  background: var(--aionio-primary-active);
+}
+
+/* Secondary Button */
+.btn-aionio-secondary {
+  background: var(--aionio-secondary);
+  color: var(--aionio-dark);
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: var(--aionio-weight-medium);
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.btn-aionio-secondary:hover {
+  background: var(--aionio-secondary-hover);
+}
+
+.btn-aionio-secondary:active {
+  background: var(--aionio-secondary-active);
+}
+
+/* Outline Button */
+.btn-aionio-outline {
+  color: var(--aionio-dark);
+  border: 2px solid var(--aionio-primary);
+  padding: 10px 26px;
+  font-size: 16px;
+  font-weight: var(--aionio-weight-medium);
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.btn-aionio-outline:hover {
+  background: var(--aionio-primary);
+  color: var(--aionio-light);
+}
+
+.btn-aionio-outline:active {
+  color: var(--aionio-dark);
+}
+
+.btn-aionio-outline-secondary {
+  background: rgba(255, 192, 145, 0.15);
+  color: var(--aionio-light);
+  border: 2px solid var(--aionio-secondary);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: var(--aionio-weight-medium);
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.btn-aionio-outline-secondary:hover {
+  border-color: var(--aionio-secondary-hover);
+  color: var(--aionio-light);
+  background-color: #b48868;
+}
+
+.btn-aionio-outline-secondary:active {
+  color: var(--aionio-dark);
+}
+
+/* Text-Link Button */
+.btn-aionio-link {
+  background: transparent;
+  color: var(--aionio-primary);
+  border: none;
+  padding: 0;
+  font-weight: var(--aionio-weight-medium);
+  font-size: var(--aionio-font-link);
+}
+
+.btn-aionio-link:hover {
+  color: var(--aionio-primary-hover);
+}
+
+/* ===========================
+   Inputs / Textareas / Form Styling
+   =========================== */
+input,
+textarea {
+  font-family: var(--aionio-font-family);
+  font-size: var(--aionio-font-body);
+  border: 1px solid var(--aionio-grey);
+  border-radius: 6px;
+  padding: 12px 14px;
+  width: 100%;
+  transition: border 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--aionio-primary);
+}
+
+/* ===========================
+   Inputs / Textareas / Form Styling
+   =========================== */
+.section {
+  padding: 6rem 0;
+}
+
+.section-title {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+hr.space-hr-line {
+    margin: 2rem 0;
+}
+
+@media (max-width: 991px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
