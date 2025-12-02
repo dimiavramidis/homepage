@@ -52,7 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  padding-top: 80px; 
+  padding-top: 80px;
   padding-bottom: 40px;
 }
 
@@ -274,7 +274,7 @@
 .expertise-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 /* ===========================
@@ -284,15 +284,15 @@
 .timeline {
   position: relative;
   list-style: none;
-  padding-left: 48px; 
+  padding-left: 48px;
 }
 
 /* Κάθετη γραμμή */
 .timeline::before {
   content: "";
   position: absolute;
-  top: 30px; 
-  bottom: 30px; 
+  top: 30px;
+  bottom: 30px;
   left: 24px;
   width: 2px;
   background: hsl(0, 0%, 85%);
@@ -313,7 +313,7 @@
   content: "";
   position: absolute;
   left: -29px;
-  top: 30px; 
+  top: 30px;
   width: 12px;
   height: 12px;
   background: var(--aionio-primary);
@@ -351,11 +351,40 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 7px; 
+  top: 7px;
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: var(--aionio-primary);
+}
+
+/* ===========================
+   Certificates section
+   =========================== */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.certification-item {
+  max-width: 420px;
+}
+
+.certification-image {
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.certification-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  line-height: 1.4;
 }
 
 /* ===========================
@@ -383,6 +412,15 @@
 
   .partners-container {
     gap: 5rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .certification-image {
+    width: 150px;
   }
 }
 
