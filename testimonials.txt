@@ -1,0 +1,22 @@
+const testimonials = [
+  {
+    title: "Reference from: Client name anonymized",
+    text: "Ich bestätige die Kooperation zwischen D.A. und der LPDG. Unter seiner Führung wurden Projekte erfolgreich umgesetzt und das Team gestärkt!"
+  },
+  {
+    title: "Reference from: Client name anonymized",
+    text: "Herr A. hat in unserem Bereich als Data Science Experte gearbeitet. Mit seiner Leistung waren wir sehr zufrieden."
+  },
+  {
+    title: "Reference from: Andreas Gekas",
+    text: "D.A. hat die DB Energie tatkräftig beim Aufbau des Data-Lakehouse unterstützt. Sein starkes technisches Knowhow war eine Bereicherung für das Projekt!"
+  },
+  {
+    title: "Reference from: Florian Ochs",
+    text: "D. demonstrierte ein starkes ML-Ops & AWS Skillset im Transformationsprojekt von DB Energie's KI-Bereich. Tolle Partnerschaft, 100% Recommend!"
+  },
+  {
+    title: "Reference from: Steffen Hummel",
+    text: "Ich kann die Zusammenarbeit mit D. A. bei der Deloitte Wirtschaftsprüfungsgesellschaft GmbH und im angegebenen Projektkontext bestätigen."
+  }
+];

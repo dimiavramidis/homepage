@@ -388,6 +388,49 @@
 }
 
 /* ===========================
+   Testimonials section
+   =========================== */
+.section-testimonials {
+  padding-top: 6rem;
+}
+.testimonial-card {
+  max-width: 720px;
+  border: none;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.testimonial-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--aionio-dark); /* near-black */
+}
+
+.testimonial-body {
+  position: relative;
+  padding-left: 38px;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--aionio-dark); /* gray-700 style */
+}
+
+.testimonial-quote-icon {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--aionio-primary); /* light blue like screenshot */
+}
+
+/* Make sure carousel controls don't overlap too aggressively */
+#clientTestimonials .carousel-control-prev,
+#clientTestimonials .carousel-control-next {
+  width: 5%;
+}
+
+/* ===========================
    Responsive: (screen < 768)
    =========================== */
 @media (max-width: 768px) {
