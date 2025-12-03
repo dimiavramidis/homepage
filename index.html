@@ -328,7 +328,7 @@
             id="clientTestimonials"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="6000"
+            data-bs-interval="3000"
           >
             <!-- Indicators -->
             <div class="carousel-indicators">
@@ -528,7 +528,26 @@
 
           <div class="row justify-content-center mt-4">
             <div class="col-12 col-md-6 col-lg-5">
-              <form>
+              <form
+                action="https://formsubmit.co/dimitrios.avramidis@aionio.eu"
+                method="POST"
+              >
+                <!-- Disable captcha -->
+                <input type="hidden" name="_captcha" value="false" />
+
+                <!-- subject -->
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New message from AIONIO contact form"
+                />
+
+                <!-- redirect -->
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://www.aionio.eu/thanks.html"
+                />
                 <div class="mb-3">
                   <input
                     type="text"

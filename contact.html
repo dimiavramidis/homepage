@@ -84,7 +84,6 @@
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-              <!-- δεν το κάνουμε active εδώ όπως ζήτησες -->
               <a class="btn btn-nav-cta" href="contact.html">Get in touch</a>
             </li>
           </ul>
@@ -96,7 +95,6 @@
       <!-- Contact hero + form -->
       <section class="py-5 bg-contact">
         <div class="container">
-          <!-- Τίτλος / κείμενο -->
           <div class="text-center mb-5">
             <h1 class="fw-bold mb-2">Get In Touch</h1>
             <p class="text-muted mx-auto" style="max-width: 640px">
@@ -106,7 +104,7 @@
           </div>
 
           <div class="row g-4 align-items-stretch justify-content-between">
-            <!-- Αριστερή κάρτα με στοιχεία -->
+            <!-- info -->
             <div class="col-12 col-lg-6 col-xl-4">
               <div class="card h-100 shadow-sm border-0 contact-card">
                 <div class="card-body">
@@ -153,16 +151,39 @@
               </div>
             </div>
 
-            <!-- Δεξιά φόρμα (πιο στενή) -->
-           <div class="col-12 col-lg-6 col-xl-6">
-              <form class="form-narrow">
+            <!-- Form -->
+            <div class="col-12 col-lg-6 col-xl-6">
+              <form
+                class="form-narrow"
+                action="https://formsubmit.co/dimitrios.avramidis@aionio.eu"
+                method="POST"
+              >
+                <!-- Disable captcha -->
+                <input type="hidden" name="_captcha" value="false" />
+
+                <!-- subject -->
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New message from AIONIO contact form"
+                />
+
+                <!-- redirect -->
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://www.aionio.eu/thanks.html"
+                />
+
                 <div class="mb-3">
                   <input
                     type="text"
                     class="form-control"
+                    name="name"
                     id="name"
                     placeholder="Name"
                     aria-label="Name"
+                    required
                   />
                 </div>
 
@@ -170,19 +191,23 @@
                   <input
                     type="email"
                     class="form-control"
+                    name="email"
                     id="email"
                     placeholder="Email"
                     aria-label="Email"
+                    required
                   />
                 </div>
 
                 <div class="mb-3">
                   <textarea
                     class="form-control"
+                    name="message"
                     id="message"
                     rows="4"
                     placeholder="Message"
                     aria-label="Message"
+                    required
                   ></textarea>
                 </div>
 
@@ -200,7 +225,7 @@
       <!-- Map section -->
       <section class="contact-map-section">
         <div class="container-fluid px-0">
-          <!-- πιο χαμηλός χάρτης -->
+          <!-- map -->
           <div class="ratio" style="--bs-aspect-ratio: 35%">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3201.3634828156382!2d8.359927676692166!3d47.43447779984722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4790129e849064a5%3A0x99bba9e3f791be0b!2zQWx0d2llc2Vuc3RyYXNzZSAzNCwgNTQzNiBXw7xyZW5sb3MsIM6VzrvOss61z4TOr86x!5e1!3m2!1sel!2sde!4v1764270812444!5m2!1sel!2sde"
@@ -223,7 +248,7 @@
             <!-- Logo & contact -->
             <div class="col-12 col-md-6 col-lg-5">
               <div class="mb-3">
-                 <a href="index.html">
+                <a href="index.html">
                   <img
                     src="assets/images/aionio-logo-removebg-preview-210x67.png"
                     alt="AIONIO"
