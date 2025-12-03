@@ -14,7 +14,7 @@
     <!-- Favicon -->
     <link
       rel="shortcut icon"
-      href="assets/images/AIONIO_LOGO.svg"
+      href="assets/images/aionio-logo-removebg-preview-210x67.png"
       type="image/x-icon"
     />
 
@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/marquee.css" />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
@@ -52,7 +53,7 @@
           href="index.html"
         >
           <img
-            src="assets/images/AIONIO_LOGO.svg"
+            src="assets/images/aionio-logo-removebg-preview-210x67.png"
             alt="AIONIO Logo"
             class="aionio-logo mx-2"
           />
@@ -131,6 +132,21 @@
       <!-- Section: Timeline -->
       <section class="container py-5">
         <ul class="timeline">
+
+          <li class="timeline-item mb-5">
+            <h5>Founder of AIONIO</h5>
+            <p class="timeline-date">January 2024 - today</p>
+            <p class="achievements">Achievements</p>
+            <ul class="ach-list">
+              <li>
+                Implemented an analytical recommender system for construction risk management, applying user-centered design within the BML cycle.
+              </li>
+              <li>
+                Integrating Feedback-Loops in Dashboards using Power-Apps.
+              </li>
+            </ul>
+          </li>          
+          
           <li class="timeline-item mb-5">
             <h5>AI Product Manager</h5>
             <p class="timeline-date">February 2024 - December 2024</p>
@@ -202,7 +218,100 @@
           </li>
         </ul>
       </section>
-      <!-- Section: Timeline -->
+
+      <!-- Skills -->
+      <section class="section-sm bg-primary-dark skills-section">
+        <div class="container">
+          <h2 class="skills-title text-center mb-5">Skills</h2>
+
+          <!-- Skills 1 -->
+          <div class="skills-group mb-5">
+            <h4 class="skills-group-title">Management Skills</h4>
+            <div class="skills-marquee">
+              <div class="skills-track">
+                <span class="skill-tag">Product Ownership</span>
+                <span class="skill-tag">Project planning</span>
+                <span class="skill-tag">Agile Management</span>
+                <span class="skill-tag">Requirement Engineering</span>
+                <span class="skill-tag">Team Workshop</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills 2 -->
+          <div class="skills-group mb-5">
+            <h4 class="skills-group-title">Technology</h4>
+            <div class="skills-marquee">
+              <div class="skills-track">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Spark</span>
+                <span class="skill-tag">Scikit-Learn</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">GCP</span>
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">Snowflake</span>
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">PowerBI</span>
+                <span class="skill-tag">Streamlit</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills 3 -->
+          <div class="skills-group mb-5">
+            <h4 class="skills-group-title">Strategy</h4>
+            <div class="skills-marquee">
+              <div class="skills-track">
+                <span class="skill-tag">Product Roadmaps</span>
+                <span class="skill-tag">Stakeholder Management</span>
+                <span class="skill-tag">Ressource Management</span>
+                <span class="skill-tag">Interviews</span>
+                <span class="skill-tag">Startup Growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="section">
+        <div class="container">
+          <h2 class="section-title text-center mb-5">Certificates</h2>
+
+          <div class="certifications-grid">
+            <!-- AWS -->
+            <div class="certification-item">
+              <img
+                src="assets/images/AWS-Machine-learning-specialty.png"
+                alt="AWS Machine Learning Certificate"
+                class="certification-image"
+              />
+              <h5 class="certification-title">
+                AWS Certified Machine Learning – Specialty
+              </h5>
+            </div>
+
+            <!-- EITCI -->
+            <div class="certification-item">
+              <img
+                src="assets/images/EITCI.png"
+                alt="EITCI AI Certificate"
+                class="certification-image"
+              />
+              <h5 class="certification-title">
+                EITCA Certified Artificial Intelligence (by European Union
+                Institution)
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -214,9 +323,9 @@
             <!-- Logo & contact -->
             <div class="col-12 col-md-6 col-lg-5">
               <div class="mb-3">
-                 <a href="index.html">
+                <a href="index.html">
                   <img
-                    src="assets/images/AIONIO_LOGO.svg"
+                    src="assets/images/aionio-logo-removebg-preview-210x67.png"
                     alt="AIONIO"
                     class="footer-logo"
                   />
@@ -310,6 +419,9 @@
     <!-- Bootstrap JS -->
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/navbar.js"></script>
+
+    <!-- Marquee -->
+    <script src="scripts/marquee.js"></script>
 
     <!-- Navbar scroll behavior + dynamic year -->
     <script>
