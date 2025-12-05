@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
-  <body>
+  <body class="navbar-always-solid">
     <!-- Navbar -->
     <nav
       id="aionioNavbar"
@@ -73,7 +73,7 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="services.html">Services</a>
@@ -135,14 +135,30 @@
       <section id="services" class="section">
         <div class="container">
           <h2 class="section-title">Services</h2>
-
           <div class="row g-5">
-            <!-- Service 1 -->
-            <div class="col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-xl-3">
               <div class="service-card card h-100">
-                <div class="service-image">
+                <div class="service-image-row">
                   <img
-                    src="assets/images/graph-4737109-1280-1256x866.jpeg"
+                    src="assets/images/services-business-analysis.png"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Business Analysis</h5>
+                  <p class="card-text">
+                    Translate business needs into technical solutions,
+                    delivering strategic clarity and maximizing project value.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="service-card card h-100">
+                <div class="service-image-row">
+                  <img
+                    src="assets/images/services-data-analytics-science.png"
                     alt=""
                   />
                 </div>
@@ -150,21 +166,16 @@
                   <h5 class="card-title">Data Analytics & Science</h5>
                   <p class="card-text">
                     Transform raw data into actionable insights, enabling
-                    informed decision-making and driving business innovation.
+                    informed decision-making and driving innovation.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Service 2 -->
-            <div class="col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-xl-3">
               <div class="service-card card h-100">
-                <div class="service-image">
-                  <img
-                    src="assets/images/idea-5799709-1920-1256x837.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
+                <div class="service-image-row">
+                  <img src="assets/images/services-ai-prototyes.png" alt="" />
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">AI Prototypes</h5>
@@ -176,41 +187,16 @@
               </div>
             </div>
 
-            <!-- Service 3 -->
-            <div class="col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-xl-3">
               <div class="service-card card h-100">
-                <div class="service-image">
-                  <img
-                    src="assets/images/artificial-intelligence-8841230-1921-1039x837.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
+                <div class="service-image-row">
+                  <img src="assets/images/services-ml-ops.png" alt="" />
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">ML Ops</h5>
+                  <h5 class="card-title">Machine Learning Operations</h5>
                   <p class="card-text">
                     Streamline training, deployment, and monitoring of ML models
                     for scalable and reliable production AI.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="col-md-6 col-lg-6">
-              <div class="service-card card h-100">
-                <div class="service-image">
-                  <img
-                    src="assets/images/connection-3308188-1920-1256x765.jpg"
-                    class="card-img-top"
-                    alt=""
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">AI Operations</h5>
-                  <p class="card-text">
-                    Automate and optimize business workflows with AI to increase
-                    efficiency, consistency, and performance.
                   </p>
                 </div>
               </div>
@@ -226,51 +212,8 @@
 
           <div class="row g-5">
             <!-- Card Component Example -->
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/logistics.svg"
-                  alt="Logistics Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">Logistics</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/esg.svg"
-                  alt="ESG Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">ESG Sustainability</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="industry-card p-4 rounded-4 h-100 text-center">
-                <img
-                  src="assets/images/icons/pharma.svg"
-                  alt="Pharma Icon"
-                  class="industry-icon mx-auto mb-3"
-                />
-                <h5 class="fw-semibold">Pharma</h5>
-                <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
-                </p>
-              </div>
-            </div>
-
+            <!-- Energy -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -280,27 +223,29 @@
                 />
                 <h5 class="fw-semibold">Energy</h5>
                 <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
+                  Smart, sustainable solutions for grid operators, energy
+                  providers, and utilities
                 </p>
               </div>
             </div>
 
+            <!-- Logistics -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
-                  src="assets/images/icons/social.svg"
-                  alt="Social Media Icon"
+                  src="assets/images/icons/logistics.svg"
+                  alt="Logistics Icon"
                   class="industry-icon mx-auto mb-3"
                 />
-                <h5 class="fw-semibold">Social Media</h5>
+                <h5 class="fw-semibold">Logistics</h5>
                 <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
+                  Optimized, connected, and automated logistics for supply-chain
+                  partners
                 </p>
               </div>
             </div>
 
+            <!-- Finance -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -310,8 +255,54 @@
                 />
                 <h5 class="fw-semibold">Finance</h5>
                 <p class="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  convallis tortor.
+                  Strengthening finance with liable solutions that ensure trust
+                  and value
+                </p>
+              </div>
+            </div>
+
+            <!-- Pharma -->
+            <div class="col-md-6 col-lg-4">
+              <div class="industry-card p-4 rounded-4 h-100 text-center">
+                <img
+                  src="assets/images/icons/pharma.svg"
+                  alt="Pharma Icon"
+                  class="industry-icon mx-auto mb-3"
+                />
+                <h5 class="fw-semibold">Pharma</h5>
+                <p class="text-light">
+                  Data-driven research in pharmaceuticals for better health
+                </p>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-6 col-lg-4">
+              <div class="industry-card p-4 rounded-4 h-100 text-center">
+                <img
+                  src="assets/images/icons/social.svg"
+                  alt="Social Media Icon"
+                  class="industry-icon mx-auto mb-3"
+                />
+                <h5 class="fw-semibold">Social Media</h5>
+                <p class="text-light">
+                  Empowering agentic solutions to deliver clean facts and drive
+                  social impact
+                </p>
+              </div>
+            </div>
+
+            <!-- ESG Sustainability -->
+            <div class="col-md-6 col-lg-4">
+              <div class="industry-card p-4 rounded-4 h-100 text-center">
+                <img
+                  src="assets/images/icons/esg.svg"
+                  alt="ESG Icon"
+                  class="industry-icon mx-auto mb-3"
+                />
+                <h5 class="fw-semibold">ESG Sustainability</h5>
+                <p class="text-light">
+                  Methodically enhancing and leveraging data to meet ESG goals
                 </p>
               </div>
             </div>
