@@ -1,0 +1,197 @@
+/* =========================================================
+   ABOUT SECTION – ZIG-ZAG BLOB LAYOUT
+   ========================================================= */
+
+/* Story Row */
+.story-row {
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.story-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Text Content */
+.story-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.story-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.story-content h5 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+
+
+
+
+/* =========================================================
+   BLOB BACKGROUND + IMAGE
+   ========================================================= */
+
+/* Wrapper that holds the rotating blob + floating image */
+.story-image-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* IMPORTANT: allow blob overflow */
+  overflow: visible;
+}
+
+/* The rotating blob (background) */
+.abstract-pattern {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  top: 50%;
+  left: 50%;
+
+  /* IMPORTANT: center blob correctly */
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9; /* optional, nicer look */
+}
+
+/* ======================================
+   BLOB SVGs (INSPIRATION / VISION / IMPACT)
+   ====================================== */
+
+.story-row--inspiration .abstract-pattern {
+  background-image: url("../assets/images/about-bg-dark.svg");
+  animation: blob-rotate1 22s linear infinite;
+}
+
+.story-row--vision .abstract-pattern {
+  background-image: url("../assets/images/about-bg-dark.svg");
+  animation: blob-rotate2 26s linear infinite;
+}
+
+.story-row--impact .abstract-pattern {
+  background-image: url("../assets/images/about-bg-dark.svg");
+  animation: blob-rotate3 30s linear infinite;
+}
+
+/* ======================================
+   FLOATING IMAGE ON TOP OF BLOB
+   ====================================== */
+
+.story-image {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  /* max-width: 420px; */
+  transform: translateY(-20px);
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-image:hover {
+  transform: translateY(-28px) scale(1.02);
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* =========================================================
+   BLOB ROTATION ANIMATIONS — FIXED (KEEP CENTER POSITION!)
+   ========================================================= */
+
+@keyframes blob-rotate1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes blob-rotate2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-180deg) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg) scale(1);
+  }
+}
+
+@keyframes blob-rotate3 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+}
+
+/* =========================================================
+   MOBILE BREAKPOINTS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .story-row {
+    margin-bottom: 80px;
+  }
+
+  .story-content {
+    padding: 20px;
+  }
+
+  .story-content h5 {
+    font-size: 1.45rem;
+  }
+
+  .story-image-wrapper {
+    min-height: 340px;
+  }
+
+  .abstract-pattern {
+    width: 220%;
+    height: 220%;
+  }
+
+  .story-image {
+    width: 80%;
+    transform: translateY(-10px);
+  }
+}
