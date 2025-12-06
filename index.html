@@ -476,32 +476,41 @@
           <div class="row justify-content-center mt-4">
             <div class="col-12 col-md-6 col-lg-5">
               <form
-                action="https://formsubmit.co/dimitrios.avramidis@aionio.eu"
                 method="POST"
+                action="https://api.web3forms.com/submit"
               >
-                <!-- Disable captcha -->
-                <input type="hidden" name="_captcha" value="false" />
-
-                <!-- subject -->
+                <!-- Web3Forms -->
                 <input
                   type="hidden"
-                  name="_subject"
-                  value="New message from AIONIO contact form"
+                  name="access_key"
+                  value="9b487aab-1522-4520-b18a-a86ded31cbcc"
                 />
-
-                <!-- redirect -->
                 <input
                   type="hidden"
-                  name="_next"
-                  value="https://www.aionio.eu/thanks.html"
+                  name="subject"
+                  value="New Contact Message from AIONIO"
                 />
+                <input type="hidden" name="from_name" value="AIONIO Website" />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  class="d-none"
+                  style="display: none"
+                />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="http://127.0.0.1:5500/thanks.html"
+                />
+
                 <div class="mb-3">
                   <input
                     type="text"
                     class="form-control"
+                    name="name"
                     id="name"
                     placeholder="Name"
-                    aria-label="Name"
+                    required
                   />
                 </div>
 
@@ -509,23 +518,25 @@
                   <input
                     type="email"
                     class="form-control"
+                    name="email"
                     id="email"
                     placeholder="Email"
-                    aria-label="Email"
+                    required
                   />
                 </div>
 
                 <div class="mb-3">
                   <textarea
                     class="form-control"
+                    name="message"
                     id="message"
                     rows="4"
                     placeholder="Message"
-                    aria-label="Message"
+                    required
                   ></textarea>
                 </div>
 
-                <div class="text-center">
+                <div>
                   <button type="submit" class="btn-aionio-primary">
                     Send message
                   </button>
