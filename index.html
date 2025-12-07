@@ -18,7 +18,7 @@
       type="image/x-icon"
     />
 
-    <!-- Google Font (προαιρετικό αλλά ταιριάζει με Inter) -->
+    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -33,6 +33,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
+    <!-- Owl Carousel 2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
     <!-- AIONIO styles -->
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
@@ -40,7 +50,7 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
-  <body>
+  <body class="navbar-always-solid">
     <!-- Navbar -->
     <nav
       id="aionioNavbar"
@@ -73,7 +83,7 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="services.html">Services</a>
@@ -82,7 +92,7 @@
               <a class="nav-link" href="expertise.html">Expertise</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
               <a class="btn btn-nav-cta" href="contact.html">Get in touch</a>
@@ -135,94 +145,89 @@
       <section id="services" class="section">
         <div class="container">
           <h2 class="section-title">Services</h2>
-
-          <div class="row g-4">
-        <!-- Service 1 -->
-        <div class="col-md-6 col-lg-3">
-          <a href="services.html" class="text-decoration-none">
-            <div class="service-card card h-100">
-          <div class="service-image">
-            <img
-              src="assets/images/BusinessAnalysis.png"
-              class="card-img-top"
-              alt="Business Analysis"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Business Analysis</h5>
-            <p class="card-text">
-              Translate business needs into technical solutions, delivering strategic clarity and maximizing project value.
-            </p>
-          </div>
+          <div class="row g-5">
+            <div class="col-12 col-md-6 col-xl-3">
+              <a
+                href="services.html#business-analysis"
+                class="service-card-link"
+              >
+                <div class="service-card card h-100">
+                  <div class="service-image-row">
+                    <img
+                      src="assets/images/services-business-analysis.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Business Analysis</h5>
+                    <p class="card-text">
+                      Translate business needs into technical solutions,
+                      delivering strategic clarity and maximizing project value.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
 
-        <!-- Service 2 -->
-        <div class="col-md-6 col-lg-3">
-          <a href="services.html" class="text-decoration-none">
-            <div class="service-card card h-100">
-          <div class="service-image">
-            <img
-              src="assets/images/DataAnalyticsScience.png"
-              class="card-img-top"
-              alt="Data Analytics & Science"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Data Analytics & Science</h5>
-            <p class="card-text">
-              Transform raw data into actionable insights, enabling
-              informed decision-making and driving innovation.
-            </p>
-          </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <a
+                href="services.html#data-analytics-science"
+                class="service-card-link"
+              >
+                <div class="service-card card h-100">
+                  <div class="service-image-row">
+                    <img
+                      src="assets/images/services-data-analytics-science.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Data Analytics & Science</h5>
+                    <p class="card-text">
+                      Transform raw data into actionable insights, enabling
+                      informed decision-making and driving innovation.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
 
-        <!-- Service 3 -->
-        <div class="col-md-6 col-lg-3">
-          <a href="services.html" class="text-decoration-none">
-            <div class="service-card card h-100">
-          <div class="service-image">
-            <img
-              src="assets/images/AIPrototyes.png"
-              class="card-img-top"
-              alt="AI Prototypes"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">AI Prototypes</h5>
-            <p class="card-text">
-              Test and refine innovative ideas, providing a tangible
-              glimpse into AI-driven solutions before full deployment.
-            </p>
-          </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <a href="services.html#ai-prototypes" class="service-card-link">
+                <div class="service-card card h-100">
+                  <div class="service-image-row">
+                    <img src="assets/images/services-ai-prototyes.png" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">AI Prototypes</h5>
+                    <p class="card-text">
+                      Test and refine innovative ideas, providing a tangible
+                      glimpse into AI-driven solutions before full deployment.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
 
-        <!-- Service 4 -->
-        <div class="col-md-6 col-lg-3">
-          <a href="services.html" class="text-decoration-none">
-            <div class="service-card card h-100">
-          <div class="service-image">
-            <img
-              src="assets/images/MLOps.png"
-              class="card-img-top"
-              alt="Machine Learning Operations"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Machine Learning Operations</h5>
-            <p class="card-text">
-              Streamline training, deployment, and monitoring of ML models
-              for scalable and reliable production AI.
-            </p>
-          </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <a
+                href="services.html#machine-learning-operations"
+                class="service-card-link"
+              >
+                <div class="service-card card h-100">
+                  <div class="service-image-row">
+                    <img src="assets/images/services-ml-ops.png" alt="" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Machine Learning Operations</h5>
+                    <p class="card-text">
+                      Streamline training, deployment, and monitoring of ML
+                      models for scalable and reliable production AI.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
           </div>
         </div>
       </section>
@@ -235,6 +240,7 @@
           <div class="row g-5">
             <!-- Card Component Example -->
 
+            <!-- Energy -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -244,11 +250,13 @@
                 />
                 <h5 class="fw-semibold">Energy</h5>
                 <p class="text-light">
-                  Smart, sustainable solutions for grid operators, energy providers, and utilities
+                  Smart, sustainable solutions for grid operators, energy
+                  providers, and utilities
                 </p>
               </div>
             </div>
-            
+
+            <!-- Logistics -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -258,11 +266,13 @@
                 />
                 <h5 class="fw-semibold">Logistics</h5>
                 <p class="text-light">
-                  Optimized, connected, and automated logistics for supply-chain partners
+                  Optimized, connected, and automated logistics for supply-chain
+                  partners
                 </p>
               </div>
             </div>
 
+            <!-- Finance -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -272,11 +282,13 @@
                 />
                 <h5 class="fw-semibold">Finance</h5>
                 <p class="text-light">
-                  Strengthening finance with liable solutions that ensure trust and value
+                  Strengthening finance with liable solutions that ensure trust
+                  and value
                 </p>
               </div>
             </div>
 
+            <!-- Pharma -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -291,6 +303,7 @@
               </div>
             </div>
 
+            <!-- Social Media -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -300,11 +313,13 @@
                 />
                 <h5 class="fw-semibold">Social Media</h5>
                 <p class="text-light">
-                  Empowering agentic solutions to deliver clean facts and drive social impact
+                  Empowering agentic solutions to deliver clean facts and drive
+                  social impact
                 </p>
               </div>
             </div>
 
+            <!-- ESG Sustainability -->
             <div class="col-md-6 col-lg-4">
               <div class="industry-card p-4 rounded-4 h-100 text-center">
                 <img
@@ -323,67 +338,107 @@
         </div>
       </section>
 
-      <!-- Clients Sections-->
-      <section id="clients" class="section bg-light">
+      <!-- Clients -->
+      <section id="clients" class="section-testimonials">
         <div class="container">
-          <h2 class="section-title">Clients</h2>
-          
-          <div class="marquee-container">
-        <div class="marquee-content">
-          <img src="assets/images/clients/Referenz_DBE2.png" alt="Client" class="marquee-image" />
-          <img src="assets/images/clients/Referenz_DBE3.png" alt="Client" class="marquee-image" />
-          <img src="assets/images/clients/Referenz_Deloitte.png" alt="Client" class="marquee-image" />
-          <img src="assets/images/clients/Referenz_LPDG.png" alt="Client" class="marquee-image" />
-          <!-- Duplicate for seamless loop -->
-          <img src="assets/images/clients/Referenz_DBE2.png" alt="Client" class="marquee-image" />
-          <img src="assets/images/clients/Referenz_DBE3.png" alt="Client" class="marquee-image" />
-          <img src="assets/images/clients/Referenz_Deloitte.png" alt="Client" class="marquee-image" />
-          <img src="assets/images/clients/Referenz_LPDG.png" alt="Client" class="marquee-image" />
-        </div>
+          <h2 class="section-title">Client References</h2>
+
+          <div id="clientTestimonials" class="owl-carousel testimonials-owl">
+            <!-- Item 1 -->
+            <div class="item">
+              <div class="testimonial-card">
+                <h5 class="testimonial-company">
+                  Deloitte Risk Advisory, Frankfurt
+                </h5>
+                <p class="testimonial-ref">Reference from: Steffen Hummel</p>
+                <div class="testimonial-body">
+                  <span class="testimonial-quote-icon">„</span>
+                  <p class="mb-0">
+                    Ich kann die Zusammenarbeit mit D. A. bei der Deloitte
+                    Wirtschaftsprüfungsgesellschaft GmbH und im angegebenen
+                    Projektkontext bestätigen.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="item">
+              <div class="testimonial-card">
+                <h5 class="testimonial-company">
+                  Lehmann + Pioneers Digital GmbH – Snowflake Partner, Frankfurt
+                </h5>
+                <!-- <p class="testimonial-ref">
+                  Reference from: Client name anonymized
+                </p> -->
+                <div class="testimonial-body">
+                  <span class="testimonial-quote-icon">„</span>
+                  <p class="mb-0">
+                    Ich bestätige die Kooperation zwischen D.A. und der LPDG.
+                    Unter seiner Führung wurden Projekte erfolgreich umgesetzt
+                    und das Team gestärkt!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="item">
+              <div class="testimonial-card">
+                <h5 class="testimonial-company">
+                  DB Energie, Frankfurt am Main
+                </h5>
+                <!-- <p class="testimonial-ref">
+                  Reference from: Client name anonymized
+                </p> -->
+                <div class="testimonial-body">
+                  <span class="testimonial-quote-icon">„</span>
+                  <p class="mb-0">
+                    Herr A. hat in unserem Bereich als Data Science Experte
+                    gearbeitet. Mit seiner Leistung waren wir sehr zufrieden.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="item">
+              <div class="testimonial-card">
+                <h5 class="testimonial-company">
+                  DB Energie, Frankfurt am Main
+                </h5>
+                <p class="testimonial-ref">Reference from: Andreas Gekas</p>
+                <div class="testimonial-body">
+                  <span class="testimonial-quote-icon">„</span>
+                  <p class="mb-0">
+                    D.A. hat die DB Energie tatkräftig beim Aufbau des
+                    Data-Lakehouse unterstützt. Sein starkes technisches Knowhow
+                    war eine Bereicherung für das Projekt!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="item">
+              <div class="testimonial-card">
+                <h5 class="testimonial-company">
+                  DB Energie, Frankfurt am Main
+                </h5>
+                <p class="testimonial-ref">Reference from: Florian Ochs</p>
+                <div class="testimonial-body">
+                  <span class="testimonial-quote-icon">„</span>
+                  <p class="mb-0">
+                    D. demonstrierte ein starkes ML-Ops &amp; AWS Skillset im
+                    Transformationsprojekt von DB Energie's KI-Bereich. Tolle
+                    Partnerschaft, 100% Recommend!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- TODO: Move to styles.css-->
-      <style>
-        .marquee-container {
-          overflow: hidden;
-          width: 100%;
-          padding: 2rem 0;
-        }
-
-        .marquee-content {
-          display: flex;
-          gap: 3rem;
-          animation: marquee 30s linear infinite;
-        }
-
-        .marquee-image {
-          height: 160px;
-          width: auto;
-          object-fit: contain;
-          filter: grayscale(100%);
-          opacity: 0.7;
-          transition: all 0.3s ease;
-          border: 2px solid #ddd;
-          border-radius: 8px;
-          padding: 1rem;
-        }
-
-        .marquee-image:hover {
-          filter: grayscale(0%);
-          opacity: 1;
-          border-color: #999;
-        }
-
-        @keyframes marquee {
-          0% {
-        transform: translateX(0);
-          }
-          100% {
-        transform: translateX(-50%);
-          }
-        }
-      </style>
 
       <!-- Partners Section-->
       <section id="partners" class="section">
@@ -423,14 +478,42 @@
 
           <div class="row justify-content-center mt-4">
             <div class="col-12 col-md-6 col-lg-5">
-              <form>
+              <form
+                method="POST"
+                action="https://api.web3forms.com/submit"
+              >
+                <!-- Web3Forms -->
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="9b487aab-1522-4520-b18a-a86ded31cbcc"
+                />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="New Contact Message from AIONIO"
+                />
+                <input type="hidden" name="from_name" value="AIONIO Website" />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  class="d-none"
+                  style="display: none"
+                />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="http://127.0.0.1:5500/thanks.html"
+                />
+
                 <div class="mb-3">
                   <input
                     type="text"
                     class="form-control"
+                    name="name"
                     id="name"
                     placeholder="Name"
-                    aria-label="Name"
+                    required
                   />
                 </div>
 
@@ -438,23 +521,25 @@
                   <input
                     type="email"
                     class="form-control"
+                    name="email"
                     id="email"
                     placeholder="Email"
-                    aria-label="Email"
+                    required
                   />
                 </div>
 
                 <div class="mb-3">
                   <textarea
                     class="form-control"
+                    name="message"
                     id="message"
                     rows="4"
                     placeholder="Message"
-                    aria-label="Message"
+                    required
                   ></textarea>
                 </div>
 
-                <div class="text-center">
+                <div>
                   <button type="submit" class="btn-aionio-primary">
                     Send message
                   </button>
@@ -523,11 +608,11 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
 
                 <!-- Mobile-only legal links -->
                 <li class="links-mobile">
-                  <a href="impressum.html">Imprint</a>
+                  <a href="imprint.html">Imprint</a>
                 </li>
                 <li class="links-mobile">
                   <a href="privacy-policy.html">Privacy Policy</a>
@@ -558,7 +643,7 @@
         >
           <ul class="footer-bottom-links list-unstyled d-flex flex-wrap mb-0">
             <li>© <span id="year"></span> AIONIO</li>
-            <li><a href="impressum.html">Imprint</a></li>
+            <li><a href="imprint.html">Imprint</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li>
               <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
@@ -568,9 +653,18 @@
       </div>
     </footer>
 
+    <!-- jQuery (απαραίτητο για OwlCarousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Bootstrap JS -->
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/navbar.js"></script>
+
+    <!-- Owl Carousel 2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Init testimonials carousel -->
+    <script src="scripts/testimonials-carousel.js"></script>
 
     <!-- Navbar scroll behavior + dynamic year -->
     <script>

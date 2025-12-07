@@ -101,13 +101,13 @@
   transition: 0.2s ease;
   display: inline-block;
   margin-top: 0.5rem;
-  text-decoration: none; /* remove underline on idle */
+  text-decoration: none;
 }
 
 .footer-cta:hover {
   background: var(--aionio-primary-hover);
-  color: var(--aionio-white); /* important for link hover */
-  text-decoration: none; /* ensure no underline */
+  color: var(--aionio-white);
+  text-decoration: none;
 }
 
 /* ===========================
@@ -166,7 +166,6 @@
   .footer-bottom .container {
     justify-content: center;
   }
-
 }
 
 @media (max-width: 575px) {
@@ -187,7 +186,7 @@
     display: block;
   }
 
-  /* Στο bottom footer φαίνεται μόνο το © AIONIO */
+  /* bottom footer show only © AIONIO */
   .footer-bottom-links li:not(:first-child) {
     display: none;
   }

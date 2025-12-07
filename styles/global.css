@@ -229,6 +229,10 @@ textarea:focus {
   padding: 6rem 0;
 }
 
+.section-sm{
+  padding: 3rem 0;
+}
+
 .section-title {
   margin-bottom: 3rem;
   text-align: center;

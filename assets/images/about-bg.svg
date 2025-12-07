@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  style="stop-color:#e7eef4; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#19456f; stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <path fill="url(#gradA)"
+    d="M51.8,-62.9C67,-49.1,79,-32.6,79.6,-16C80.2,0.5,69.3,17.1,59.5,34.6C49.7,52,41,70.3,26.3,78.2C11.7,86,-8.9,83.5,-26.3,75.7C-43.7,67.9,-58,54.8,-67.5,38.8C-76.9,22.8,-81.5,3.8,-77.8,-13.1C-74.1,-30,-62.1,-44.8,-47.7,-58.8C-33.4,-72.8,-16.7,-86,0.8,-87C18.3,-88,36.7,-76.8,51.8,-62.9Z"
+    transform="translate(100 100)"
+  />
+</svg>

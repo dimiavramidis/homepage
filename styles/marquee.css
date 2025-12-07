@@ -1,0 +1,60 @@
+/* ===========================
+   Skills marquee styles
+   =========================== */
+
+.skills-section {
+  color: #ffffff;
+}
+
+.skills-title {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.skills-group {
+  overflow: hidden;
+}
+
+.skills-group-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.skills-marquee {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.skills-track {
+  display: inline-flex;
+  gap: 2rem;
+  padding-right: 2rem;
+  white-space: nowrap;
+}
+
+.skill-tag {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.skill-tag:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .skills-group {
+    overflow: visible;
+  }
+
+  .skills-marquee {
+    transform: none !important;
+  }
+
+  .skills-track {
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 1rem;
+  }
+}

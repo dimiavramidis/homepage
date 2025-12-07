@@ -32,6 +32,27 @@
 }
 
 /* ============================================
+   ACTIVE NAV LINK
+   ============================================ */
+
+/* When the navbar is transparent/dark (home hero top): white text, primary underline */
+.aionio-navbar.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--aionio-primary) !important;
+  font-weight: var(--aionio-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* When navbar is white (scrolled or mobile) — dark text, primary underline */
+.aionio-navbar.navbar-scrolled .navbar-nav .nav-link.active,
+.aionio-navbar.mobile-open .navbar-nav .nav-link.active {
+  color: var(--aionio-primary) !important;
+  font-weight: var(--aionio-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ============================================
    SCROLLED + MOBILE-OPEN (white navbar)
    ============================================ */
 
