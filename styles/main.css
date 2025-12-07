@@ -393,6 +393,7 @@
 .certification-image {
   object-fit: contain;
   margin-bottom: 15px;
+  width: 150px;
 }
 
 .certification-title {
@@ -655,7 +656,7 @@
   }
 
   .certification-image {
-    width: 150px;
+    max-width: 150px;
   }
 }
 
@@ -663,10 +664,6 @@
   .form-narrow {
     max-width: 100% !important;
   }
-}
-
-/* On small screens we want only the center card visible (side cards hidden via d-none d-lg-block in HTML) */
-@media (max-width: 991.98px) {
   .section-testimonials {
     padding-top: 4rem;
   }
@@ -683,3 +680,22 @@
     font-size: 28px;
   }
 }
+
+/* On small screens we want only the center card visible (side cards hidden via d-none d-lg-block in HTML)
+@media (max-width: 991.98px) {
+  .section-testimonials {
+    padding-top: 4rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-body {
+    padding-left: 32px;
+  }
+
+  .testimonial-quote-icon {
+    font-size: 28px;
+  }
+} */

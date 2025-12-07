@@ -38,10 +38,6 @@
   line-height: 1.3;
 }
 
-
-
-
-
 /* =========================================================
    BLOB BACKGROUND + IMAGE
    ========================================================= */
@@ -193,5 +189,14 @@
   .story-image {
     width: 80%;
     transform: translateY(-10px);
+  }
+
+  .abstract-pattern {
+    width: 100%;
+    height: 100%;
+  }
+
+  .story-image img {
+    width: 200px;
   }
 }
