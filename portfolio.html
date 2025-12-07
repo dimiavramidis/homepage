@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>AIONIO | Blog</title>
+    <title>AIONIO | Portfolio</title>
     <meta
       name="description"
       content="AIONIO – AI-powered tools and automations."
@@ -14,7 +14,7 @@
     <!-- Favicon -->
     <link
       rel="shortcut icon"
-      href="assets/images/AIONIO_LOGO.svg"
+      href="assets/images/aionio-logo-removebg-preview-210x67.png"
       type="image/x-icon"
     />
 
@@ -51,7 +51,7 @@
           href="index.html"
         >
           <img
-            src="assets/images/AIONIO_LOGO.svg"
+            src="assets/images/aionio-logo-removebg-preview-210x67.png"
             alt="AIONIO Logo"
             class="aionio-logo mx-2"
           />
@@ -78,10 +78,10 @@
               <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="expertise.html">Expertise</a>
+              <a class="nav-link" href="about-us.html">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="blog.html">Blog</a>
+              <a class="nav-link active" href="portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
               <a class="btn btn-nav-cta" href="contact.html">Get in touch</a>
@@ -94,72 +94,92 @@
     <main class="aionio-main">
       <section class="py-5">
         <div class="container">
-          <!-- Blog section title -->
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h1>Blog</h1>
-            </div>
+          <h2 class="section-title">Portfolio</h2>
+
+          <!-- FILTER SELECTS -->
+          <div
+            class="portfolio-selects d-flex flex-column flex-md-row gap-3 mb-4"
+          >
+            <!-- CATEGORY SELECT -->
+            <select id="categorySelect" class="form-select btn-hero btn-aionio-outline">
+              <option value="all">Industry-Sectors</option>
+              <option value="category-1">Energy</option>
+              <option value="category-2">Logistics</option>
+            </select>
+
+            <!-- SDG (Sustainable Development Goals) filter dropdown -->
+            <select id="categorySelect" class="form-select btn-hero btn-aionio-outline">
+              <option value="all">SDG</option>
+              <option value="category-1">Energy</option>
+              <option value="category-2">Logistics</option>
+            </select>
+            
+            <!-- SUBCATEGORY SELECT -->
+            <!-- <select id="subcategorySelect" class="form-select">
+              <option value="all">All Subcategories</option>
+            </select> -->
           </div>
 
-          <!-- BLOG POSTS WRAPPER -->
+          <!-- Portfolio Items -->
           <div class="d-flex flex-column gap-5">
-            <!-- POST 1 -->
-            <div class="row align-items-center g-4">
-              <!-- TEXT -->
-              <div class="col-12 col-md-6">
-                <h2 class="fw-bold mb-2">Llama 3.1 Released</h2>
-                <p class="text-muted mb-2">July 25, 2024</p>
-                <p class="mb-4">
-                  Zuckerberg’s Open Source AI Model. OpenAI must catch a
-                  wake-up!
-                </p>
-
-                <a
-                  href="https://medium.com/augmented-startups/llama-3-1-zuckerbergs-open-source-model-from-meta-945a1c099291"
-                  target="_blank"
-                  class="btn-hero btn-aionio-outline mt-3"
-                >
-                  Learn more
-                </a>
-              </div>
-
+            <div class="row g-4 portfolio-card" data-category="category-1">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">
                 <img
-                  src="assets/images/1-nlg3c7-nzvcxfmexo7oong-1256x700.jpg"
-                  alt="Llama 3.1 Released"
-                  class="blog-img-uniform"
+                  src="assets/images/photovoltaic_forecasting.jpg"
+                  alt=" Photovoltaic Forecasting"
+                  class="portfolio-img-uniform"
                 />
+              </div>
+              <!-- TEXT -->
+              <div class="col-12 col-md-6 p-3">
+                <h2 class="portfolio-title">
+                  Photovoltaic Forecasting: Maximizing Returns and Eliminating
+                  Grid Penalties
+                </h2>
+                <p class="text-muted mb-2 portfolio-category">Energy</p>
+                <p class="mb-4">
+                  Small and medium-sized renewable energy producers face a
+                  critical business problem
+                </p>
+
+                <a
+                  href="/portfolio-projects/photovoltaic-forecasting.html"
+                  class="btn-hero btn-aionio-outline mt-3"
+                >
+                  See details
+                </a>
               </div>
             </div>
 
-            <!-- POST 2 -->
-            <div class="row align-items-center g-4">
-              <!-- TEXT -->
-              <div class="col-12 col-md-6">
-                <h2 class="fw-bold mb-2">Machine Learning @ DB Energy</h2>
-                <p class="text-muted mb-2">March 15, 2023</p>
-                <p class="mb-4">
-                  DB Energie Uses Machine Learning to Enhance Sustainability and
-                  Reliability of Its Power Grid Operations.
-                </p>
-
-                <a
-                  href="https://aws.amazon.com/de/solutions/case-studies/db-energie/"
-                  target="_blank"
-                  class="btn-hero btn-aionio-outline mt-3"
-                >
-                  Learn more
-                </a>
-              </div>
-
+            <div class="row g-4 portfolio-card" data-category="category-2">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">
                 <img
-                  src="assets/images/screenshot-2024-07-28-110342-1115x398.png"
-                  alt="Machine Learning @ DB Energy"
-                  class="blog-img-uniform blog-img-db"
+                  src="assets/images/power-grid-operations.jpg"
+                  alt="Power Grid Operations"
+                  class="portfolio-img-uniform blog-img-db"
                 />
+              </div>
+              <!-- TEXT -->
+              <div class="col-12 col-md-6 p-3">
+                <h2 class="portfolio-title">
+                  Using Machine Learning to Enhance Sustainability and
+                  Reliability for Power Grid Operations
+                </h2>
+                <p class="text-muted mb-2 portfolio-category">Logistics</p>
+                <p class="mb-4">
+                  In today's fast-paced energy landscape, companies face
+                  increasing pressure to deliver sustainable and reliable
+                  electricity supply while minimizing costs.
+                </p>
+
+                <a
+                  href="/portfolio-projects/power-grid-operations.html"
+                  class="btn-hero btn-aionio-outline mt-3"
+                >
+                  See details
+                </a>
               </div>
             </div>
           </div>
@@ -178,7 +198,7 @@
               <div class="mb-3">
                 <a href="index.html">
                   <img
-                    src="assets/images/AIONIO_LOGO.svg"
+                    src="assets/images/aionio-logo-removebg-preview-210x67.png"
                     alt="AIONIO"
                     class="footer-logo"
                   />
@@ -223,8 +243,8 @@
               <ul class="list-unstyled footer-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
 
                 <!-- Mobile-only legal links -->
                 <li class="links-mobile">
@@ -271,6 +291,7 @@
 
     <!-- Bootstrap JS -->
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
     <script src="scripts/navbar.js"></script>
 
     <!-- Navbar scroll behavior + dynamic year -->

@@ -1,0 +1,716 @@
+/* ===========================
+   hero-banner
+   =========================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--aionio-white);
+  box-sizing: border-box;
+}
+
+/* VIDEO BACKGROUND */
+.hero-video-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, #041423 0%, rgba(4, 20, 35, 0) 100%);
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  width: 177.78vh;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw;
+  pointer-events: none;
+  border: 0;
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+/* TYPOGRAPHY */
+.hero-title,
+.hero-subtitle {
+  color: var(--aionio-secondary);
+  font-weight: var(--aionio-weight-bold);
+  line-height: 1.1;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+}
+
+.hero-text {
+  max-width: 70%;
+}
+
+.btn-hero {
+  width: auto;
+  align-self: flex-start;
+  padding: 10px 26px;
+}
+
+/* ===========================
+   services
+   =========================== */
+/* Card styling */
+.service-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  margin: 0 auto; /* center it */
+}
+
+.service-image-row {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px 10px;
+  overflow: hidden;
+}
+
+.service-image-row img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.service-image {
+  max-width: 380px;
+  object-fit: contain;
+}
+
+#services .card-body {
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
+/* Card content */
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--aionio-black);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: var(--aionio-dark);
+}
+
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-card-link:hover .service-card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+  transition: 0.25s ease;
+}
+
+/* ===========================
+   industry
+   =========================== */
+
+.industry-card {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 116, 139, 0.2),
+    rgba(45, 66, 95, 0.1)
+  );
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.industry-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: brightness(0) saturate(100%) invert(78%) sepia(3%) saturate(0%)
+    hue-rotate(202deg) brightness(88%) contrast(90%);
+}
+
+/* ===========================
+   Partners section
+   =========================== */
+.partner-image {
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* ===========================
+   Contact section
+   =========================== */
+.contact-form {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact .form-control {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* ===========================
+   Service page
+   =========================== */
+.aionio-main {
+  padding-top: 5rem;
+}
+
+/* ===========================
+   Blog page
+   =========================== */
+.portfolio-img-uniform {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.blog-img-db {
+  object-position: left center;
+}
+
+/* ===========================
+   Contact
+   =========================== */
+.bg-contact {
+  background-color: var(--aionio-primary-light);
+}
+
+/* Icon circles left card */
+.contact-card-icon {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 999px;
+  background-color: #f3f4f6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* Card styling */
+.contact-card {
+  border-radius: 0.75rem;
+}
+
+/* Social icons contact card */
+.contact-social a {
+  font-size: 1.4rem;
+  color: var(--aionio-dark);
+  margin-right: 0.6rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-social a:hover {
+  color: var(--aionio-primary);
+}
+
+/* Form */
+.form-narrow {
+  max-width: 480px;
+  width: 100%;
+}
+
+.form-narrow .form-control {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  font-size: 0.92rem;
+}
+
+/* Map section */
+.contact-map-section {
+  background-color: #ffffff;
+}
+
+.portfolio-title {
+  color: var(--primary-color);
+  font-size: clamp(1.4rem, 2.1vw, 1.8rem);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.case-study-image {
+  width: 100%;
+}
+
+.portfolio-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Portfolio Filters Wrapper */
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.portfolio-selects select.form-select {
+  max-width: 250px;
+}
+
+/* ===========================
+   Expertise
+   =========================== */
+.expertise-photo-box {
+  width: 420px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.expertise-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   TIMELINE
+   =========================== */
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding-left: 48px;
+}
+
+/* Κάθετη γραμμή */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 24px;
+  width: 2px;
+  background: hsl(0, 0%, 85%);
+}
+
+/* Κάρτα */
+.timeline .timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding: 25px;
+  background-color: var(--aionio-primary-light);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Timeline dot */
+.timeline .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  background: var(--aionio-primary);
+  border-radius: 50%;
+}
+
+/* Date */
+.timeline-date {
+  font-size: var(--aionio-font-small);
+  color: var(--aionio-dark);
+}
+
+/* "Achievements" */
+.achievements {
+  font-weight: 500;
+}
+
+/* ===========================
+   ACHIEVEMENTS LIST (FULL DOTS)
+   =========================== */
+
+.ach-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.ach-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 6px;
+}
+
+.ach-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--aionio-primary);
+}
+
+/* ===========================
+   Certificates section
+   =========================== */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.certification-item {
+  max-width: 420px;
+}
+
+.certification-image {
+  object-fit: contain;
+  margin-bottom: 15px;
+  width: 150px;
+}
+
+.certification-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* ===========================
+   Testimonials section
+   =========================== */
+.section-testimonials {
+  padding-top: 6rem;
+}
+
+/* Card base */
+.testimonial-card {
+  max-width: 720px;
+  border: none;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  background-color: #ffffff;
+}
+
+/* Company + reference */
+.testimonial-company {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--aionio-dark);
+}
+
+.testimonial-ref {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* Deprecated but kept if used somewhere else */
+.testimonial-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--aionio-dark);
+}
+
+/* Quote text */
+.testimonial-body {
+  position: relative;
+  padding-left: 38px;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--aionio-dark);
+}
+
+.testimonial-quote-icon {
+  position: absolute;
+  left: 0;
+  top: -6px;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--aionio-primary);
+}
+
+/* Owl wrapper */
+.testimonials-owl {
+  margin-top: 3rem;
+}
+
+/* κάθε item container */
+.testimonials-owl .item {
+  padding: 40px 20px 60px;
+  opacity: 0.25;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* η κάρτα μέσα (χρησιμοποιεί τα δικά σου .testimonial-card) */
+.testimonials-owl .testimonial-card {
+  max-width: 100%;
+  height: 100%;
+  border: none;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  background-color: #ffffff;
+}
+
+/* το center item μεγαλώνει + full opacity */
+.testimonials-owl .owl-item.active.center .item {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Dots */
+.testimonials-owl .owl-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.testimonials-owl .owl-dot span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 3px;
+  border-radius: 999px;
+  background: #d1d5db;
+  transition: all 0.25s ease;
+}
+
+.testimonials-owl .owl-dot.active span,
+.testimonials-owl .owl-dot:hover span {
+  background: var(--aionio-primary);
+  transform: scale(0.8);
+}
+
+/* Arrows */
+.testimonials-owl .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.testimonials-owl .owl-nav button.owl-prev,
+.testimonials-owl .owl-nav button.owl-next {
+  pointer-events: auto;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #d1d5db;
+  padding: 0 0.5rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.testimonials-owl .owl-nav button.owl-prev:hover,
+.testimonials-owl .owl-nav button.owl-next:hover {
+  color: #9ca3af;
+  transform: scale(1.05);
+}
+
+/* Responsive: σε μικρές οθόνες 1 card full width */
+@media (max-width: 767.98px) {
+  .testimonials-owl .item {
+    padding: 20px 0 40px;
+  }
+}
+
+/* Center wrapper in large screens */
+@media (min-width: 992px) {
+  #clientTestimonials .carousel-inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ===========================
+   Carousel controls
+   =========================== */
+#clientTestimonials .carousel-control-prev,
+#clientTestimonials .carousel-control-next {
+  width: 8%;
+  z-index: 10;
+}
+
+#clientTestimonials .carousel-control-prev-icon,
+#clientTestimonials .carousel-control-next-icon {
+  filter: invert(0.3);
+  width: 40px;
+  height: 40px;
+}
+
+/* Make indicators a bit nicer (optional) */
+#clientTestimonials .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+#clientTestimonials .carousel-indicators .active {
+  background-color: var(--aionio-primary);
+}
+
+/* ===========================
+   3-card layout per slide
+   =========================== */
+
+/* Row that holds the 3 cards */
+.testimonial-row {
+  align-items: stretch;
+}
+
+/* Make all 3 columns flex so cards can stretch to equal height */
+.testimonial-row > div {
+  display: flex;
+}
+
+/* Inside carousel we want full-width cards per column */
+#clientTestimonials .testimonial-card {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Main (center) card */
+.testimonial-card-main {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Side (ghost) cards */
+.testimonial-card-side {
+  opacity: 0.45;
+  transform: scale(0.95);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect only on active slide main card */
+.carousel-item.active .testimonial-card-main:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.2);
+}
+
+/* ===========================
+   Responsive: (screen < 768)
+   =========================== */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .btn-hero {
+    align-self: center;
+  }
+
+  .partners-container {
+    gap: 5rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .certification-image {
+    max-width: 150px;
+  }
+
+  .portfolio-selects {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 991px) {
+  .form-narrow {
+    max-width: 100% !important;
+  }
+  .section-testimonials {
+    padding-top: 4rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-body {
+    padding-left: 32px;
+  }
+
+  .testimonial-quote-icon {
+    font-size: 28px;
+  }
+
+    .portfolio-title {
+    font-size: 1.3rem;
+  }
+}

@@ -1,40 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - My AI Services</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>My AI Services</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="services.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AIONIO | Services</title>
+    <meta
+      name="description"
+      content="AIONIO – AI consulting, data analytics, AI prototypes, MLOps and AI operations."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/AIONIO_LOGO.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Google Font (προαιρετικό αλλά ταιριάζει με Inter) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- AIONIO styles -->
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body class="navbar-always-solid">
+    <!-- Navbar -->
+    <nav
+      id="aionioNavbar"
+      class="navbar navbar-expand-lg navbar-dark fixed-top aionio-navbar"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center bg-white"
+          href="index.html"
+        >
+          <img
+            src="assets/images/AIONIO_LOGO.svg"
+            alt="AIONIO Logo"
+            class="aionio-logo mx-2"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-nav-cta" href="contact.html">Get in touch</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div class="container">
-        <section id="services">
-            <h2>Services</h2>
-            <h3>Data Analysis</h3>
-            <p>Offering detailed data analysis to uncover insights.</p>
-            <h3>AI Prototypes</h3>
-            <p>Developing AI prototypes to test and validate concepts.</p>
-            <h3>AI Operations</h3>
-            <p>Implementing AI solutions into your business operations.</p>
-            <h3>MLOps</h3>
-            <p>Ensuring reliable and efficient machine learning operations.</p>
-        </section>
-    </div>
-    <footer>
-        <a href="impressum.html">Impressum</a>
-        <a href="dataprivacy.html">Data Privacy</a>
-        <a href="terms.html">Terms and Conditions</a>
-        <p>&copy; 2024 My AI Services</p>
+
+    <main class="aionio-main">
+      <!-- ===== 1. Business Analysis ===== -->
+      <section id="business-analysis" class="container service-section py-5">
+        <h2 class="section-title">Services</h2>
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">Business Analysis</h2>
+            <p class="mb-0">
+              Methodically identify and prioritize opportunities in AI product
+              development by translating high-level business and technology
+              goals into actionable requirements. Define and monitor key
+              performance indicators to measure product impact, user adoption,
+              and ROI. Collaborate closely with data scientists, engineers, and
+              stakeholders to align AI solutions with strategic objectives.
+              Continuously analyze user feedback and performance metrics to
+              refine features, optimize algorithms, and drive innovation in AI
+              products.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/services-business-analysis.png"
+              alt="services Business Analysis"
+              class="service-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 2. Data Analytics and Science ===== -->
+      <section  id="data-analytics-science" class="container service-section py-5">
+        <div class="row align-items-center gy-4">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">Data Analytics and Science</h2>
+            <p class="mb-0">
+              Leverage advanced analytics and machine learning to extract
+              actionable insights from complex, multi-format datasets. Manage
+              the end-to-end data lifecycle by collection, preprocessing,
+              modeling, and evaluation to support AI product development and
+              optimization. Develop predictive models, recommendation systems,
+              and algorithmic solutions that enhance product performance and
+              user experience. Present findings through clear visualizations and
+              reports, enabling stakeholders to make data-driven decisions.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/services-data-analytics-science.png"
+              alt="services Data Analytics and Science"
+              class="service-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. AI Prototypes ===== -->
+      <section id="ai-prototypes" class="container service-section py-5">
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">AI Prototypes</h2>
+            <p class="mb-0">
+              Design and implement AI prototypes that validate product concepts
+              and accelerate time-to-market for AI solutions. Reduce development
+              costs and mitigate technical risks by testing and refining models
+              early in the product lifecycle. Enable stakeholders to make
+              data-driven decisions through demonstrable AI functionality,
+              improving alignment and adoption. Iterate rapidly based on
+              performance metrics and user feedback, ensuring prototypes
+              transition smoothly into scalable, production-ready AI products
+              that deliver measurable business value.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/services-ai-prototypes.png"
+              alt="services AI Prototypes"
+              class="service-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 4. Machine Learning Operations ===== -->
+      <section id="machine-learning-operations" class="container service-section py-5">
+        <div class="row align-items-center gy-4">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">Machine Learning Operations</h2>
+            <p class="mb-0">
+              Implement MLOps to seamlessly integrate AI technologies, optimize
+              machine learning workflows, and strengthen team capabilities.
+              Apply best practices that combine ML lifecycle management with
+              established DevOps processes to improve model deployment,
+              scalability, and reliability. Streamline model training, testing,
+              monitoring, and retraining to reduce time-to-production and
+              operational overhead. This structured approach empowers businesses
+              to innovate continuously, maintain competitive advantage, and
+              achieve sustainable, data-driven growth.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/services-ml-ops.png"
+              alt="services Machine Learning Operations"
+              class="service-image"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="aionio-footer">
+      <!-- Top footer -->
+      <div class="footer-top">
+        <div class="container py-5">
+          <div class="row gy-4 align-items-start">
+            <!-- Logo & contact -->
+            <div class="col-12 col-md-6 col-lg-5">
+              <div class="mb-3">
+                <a href="index.html">
+                  <img
+                    src="assets/images/AIONIO_LOGO.svg"
+                    alt="AIONIO"
+                    class="footer-logo"
+                  />
+                </a>
+              </div>
+
+              <ul class="footer-contact list-unstyled mb-0">
+                <li>
+                  <span class="footer-icon"
+                    ><i class="fa-solid fa-location-dot"></i>
+                  </span>
+                  5436 Würenlos, Switzerland
+                </li>
+                <li>
+                  <span class="footer-icon"
+                    ><i class="fa-solid fa-envelope"></i
+                  ></span>
+                  <a href="mailto:dimitrios.avramidis@aionio.eu">
+                    dimitrios.avramidis@aionio.eu
+                  </a>
+                </li>
+                <li>
+                  <span class="footer-icon"
+                    ><i class="fa-solid fa-phone"></i>
+                  </span>
+                  +41 763109934
+                </li>
+                <li class="mt-2 footer-social">
+                  <a href="#" aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" aria-label="GitHub"
+                    ><i class="fa-brands fa-git-alt"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Links -->
+            <div class="col-12 col-md-3 col-lg-2">
+              <h5>Links</h5>
+              <ul class="list-unstyled footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+
+                <!-- Mobile-only legal links -->
+                <li class="links-mobile">
+                  <a href="imprint.html">Imprint</a>
+                </li>
+                <li class="links-mobile">
+                  <a href="privacy-policy.html">Privacy Policy</a>
+                </li>
+                <li class="links-mobile">
+                  <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="col-12 col-md-3 col-lg-3 ms-auto">
+              <h5>Get in touch</h5>
+              <p class="footer-text">
+                Have a question or a project in mind?<br />
+                We’d love to hear from you.
+              </p>
+              <a href="contact.html" class="footer-cta"> Let’s talk </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-wrap justify-content-center align-items-center gap-2 py-3"
+        >
+          <ul class="footer-bottom-links list-unstyled d-flex flex-wrap mb-0">
+            <li>© <span id="year"></span> AIONIO</li>
+            <li><a href="imprint.html">Imprint</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li>
+              <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/navbar.js"></script>
+
+    <!-- Navbar scroll behavior + dynamic year -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
