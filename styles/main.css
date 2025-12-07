@@ -210,9 +210,8 @@
 /* ===========================
    Blog page
    =========================== */
-.blog-img-uniform {
+.portfolio-img-uniform {
   width: 100%;
-  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -273,6 +272,10 @@
 /* Map section */
 .contact-map-section {
   background-color: #ffffff;
+}
+
+.case-study-image {
+  width: 100%;
 }
 
 /* ===========================
