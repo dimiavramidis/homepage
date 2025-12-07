@@ -94,13 +94,25 @@
     <main class="aionio-main">
       <section class="py-5">
         <div class="container">
-          <!-- Blog section title -->
           <h2 class="section-title">Portfolio</h2>
+
+          <!-- FILTER TABS -->
+          <div class="portfolio-filters">
+            <a href="#" class="portfolio-filter-btn active" data-filter="all"
+              >All</a
+            >
+            <a href="#" class="portfolio-filter-btn" data-filter="category-1"
+              >Category 1</a
+            >
+            <a href="#" class="portfolio-filter-btn" data-filter="category-2"
+              >Category 2</a
+            >
+          </div>
 
           <!-- BLOG POSTS WRAPPER -->
           <div class="d-flex flex-column gap-5">
             <!-- POST 1 -->
-            <div class="row g-4">
+            <div class="row g-4 portfolio-card" data-category="category-1">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">
                 <img
@@ -110,12 +122,12 @@
                 />
               </div>
               <!-- TEXT -->
-              <div class="col-12 col-md-6">
-                <h2 class="fw-bold mb-2">
+              <div class="col-12 col-md-6 p-3">
+                <h2 class="portfolio-title">
                   Photovoltaic Forecasting: Maximizing Returns and Eliminating
                   Grid Penalties
                 </h2>
-                <p class="text-muted mb-2">Category 1</p>
+                <p class="text-muted mb-2 portfolio-category">Category 1</p>
                 <p class="mb-4">
                   Small and medium-sized renewable energy producers face a
                   critical business problem
@@ -125,13 +137,13 @@
                   href="/portfolio-projects/photovoltaic-forecasting.html"
                   class="btn-hero btn-aionio-outline mt-3"
                 >
-                  Learn more
+                  See details
                 </a>
               </div>
             </div>
 
             <!-- POST 2 -->
-            <div class="row  g-4">
+            <div class="row g-4 portfolio-card" data-category="category-2">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">
                 <img
@@ -141,12 +153,12 @@
                 />
               </div>
               <!-- TEXT -->
-              <div class="col-12 col-md-6">
-                <h2 class="fw-bold mb-2">
+              <div class="col-12 col-md-6 p-3">
+                <h2 class="portfolio-title">
                   Using Machine Learning to Enhance Sustainability and
                   Reliability for Power Grid Operations
                 </h2>
-                <p class="text-muted mb-2">Category 2</p>
+                <p class="text-muted mb-2 portfolio-category">Category 2</p>
                 <p class="mb-4">
                   In today's fast-paced energy landscape, companies face
                   increasing pressure to deliver sustainable and reliable
@@ -157,7 +169,7 @@
                   href="/portfolio-projects/power-grid-operations.html"
                   class="btn-hero btn-aionio-outline mt-3"
                 >
-                  Learn more
+                  See details
                 </a>
               </div>
             </div>
@@ -270,6 +282,7 @@
 
     <!-- Bootstrap JS -->
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
     <script src="scripts/navbar.js"></script>
 
     <!-- Navbar scroll behavior + dynamic year -->
