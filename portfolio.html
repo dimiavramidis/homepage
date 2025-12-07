@@ -96,22 +96,24 @@
         <div class="container">
           <h2 class="section-title">Portfolio</h2>
 
-          <!-- FILTER TABS -->
-          <div class="portfolio-filters">
-            <a href="#" class="portfolio-filter-btn active" data-filter="all"
-              >All</a
-            >
-            <a href="#" class="portfolio-filter-btn" data-filter="category-1"
-              >Category 1</a
-            >
-            <a href="#" class="portfolio-filter-btn" data-filter="category-2"
-              >Category 2</a
-            >
+          <!-- FILTER SELECTS -->
+          <div
+            class="portfolio-selects d-flex flex-column flex-md-row gap-3 mb-4"
+          >
+            <!-- CATEGORY SELECT -->
+            <select id="categorySelect" class="form-select">
+              <option value="all">All</option>
+              <option value="category-1">Category 1</option>
+              <option value="category-2">Category 2</option>
+            </select>
+
+            <!-- SUBCATEGORY SELECT -->
+            <!-- <select id="subcategorySelect" class="form-select">
+              <option value="all">All Subcategories</option>
+            </select> -->
           </div>
 
-          <!-- BLOG POSTS WRAPPER -->
           <div class="d-flex flex-column gap-5">
-            <!-- POST 1 -->
             <div class="row g-4 portfolio-card" data-category="category-1">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">
@@ -142,7 +144,6 @@
               </div>
             </div>
 
-            <!-- POST 2 -->
             <div class="row g-4 portfolio-card" data-category="category-2">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">

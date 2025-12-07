@@ -286,13 +286,6 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* .portfolio-card:hover {
-  padding: 20px;
-  border-radius: 20px;
-  transform: translateY(-4px);
-  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
-} */
-
 /* Portfolio Filters Wrapper */
 .portfolio-filters {
   display: flex;
@@ -301,24 +294,8 @@
   margin-bottom: 2.5rem;
 }
 
-/* Each filter is a link, not a button */
-.portfolio-filter-btn {
-  font-size: var(--aionio-font-link);
-  color: var(--aionio-dark);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.portfolio-filter-btn:hover {
-  color: var(--aionio-primary-hover);
-}
-
-/* Active state */
-.portfolio-filter-btn.active {
-  color: var(--aionio-primary-active);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.portfolio-selects select.form-select {
+  max-width: 250px;
 }
 
 /* ===========================
@@ -704,6 +681,10 @@
   .certification-image {
     max-width: 150px;
   }
+
+  .portfolio-selects {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 991px) {
@@ -726,22 +707,3 @@
     font-size: 28px;
   }
 }
-
-/* On small screens we want only the center card visible (side cards hidden via d-none d-lg-block in HTML)
-@media (max-width: 991.98px) {
-  .section-testimonials {
-    padding-top: 4rem;
-  }
-
-  .testimonial-card {
-    padding: 1.5rem;
-  }
-
-  .testimonial-body {
-    padding-left: 32px;
-  }
-
-  .testimonial-quote-icon {
-    font-size: 28px;
-  }
-} */
