@@ -108,12 +108,16 @@
             </select>
 
             <!-- SDG (Sustainable Development Goals) filter dropdown -->
-            <select id="categorySelect" class="form-select btn-hero btn-aionio-outline">
+            <!-- SDG (Sustainable Development Goals) filter dropdown -->
+            <!-- <select id="sdgSelect" class="form-select btn-hero btn-aionio-outline">
               <option value="all">SDG</option>
-              <option value="category-1">Energy</option>
-              <option value="category-2">Logistics</option>
+              <option value="sdg-7">SDG 7: Affordable and Clean Energy</option>
+              <option value="sdg-9">SDG 9: Industry, Innovation and Infrastructure</option>
+              <option value="sdg-11">SDG 11: Sustainable Cities and Communities</option>
+              <option value="sdg-13">SDG 13: Climate Action</option>
             </select>
-            
+            -->
+
             <!-- SUBCATEGORY SELECT -->
             <!-- <select id="subcategorySelect" class="form-select">
               <option value="all">All Subcategories</option>
@@ -121,38 +125,39 @@
           </div>
 
           <!-- Portfolio Items -->
-          <div class="d-flex flex-column gap-5">
-            <div class="row g-4 portfolio-card" data-category="category-1">
+            <div class="d-flex flex-column gap-5">
+            <div class="row g-4 portfolio-card" data-category="category-1" data-sdg="sdg-7">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">
-                <img
-                  src="assets/images/photovoltaic_forecasting.jpg"
-                  alt=" Photovoltaic Forecasting"
-                  class="portfolio-img-uniform"
-                />
+              <img
+                src="assets/images/photovoltaic_forecasting.jpg"
+                alt=" Photovoltaic Forecasting"
+                class="portfolio-img-uniform"
+              />
               </div>
               <!-- TEXT -->
               <div class="col-12 col-md-6 p-3">
-                <h2 class="portfolio-title">
-                  Photovoltaic Forecasting: Maximizing Returns and Eliminating
-                  Grid Penalties
-                </h2>
-                <p class="text-muted mb-2 portfolio-category">Energy</p>
-                <p class="mb-4">
-                  Small and medium-sized renewable energy producers face a
-                  critical business problem
-                </p>
+              <h2 class="portfolio-title">
+                Photovoltaic Forecasting: Maximizing Returns and Eliminating
+                Grid Penalties
+              </h2>
+              <p class="text-muted mb-2 portfolio-category">Energy</p>
+              <p class="text-muted mb-2 portfolio-category">SDG 7: Affordable and Clean Energy</p>
+              <p class="mb-4">
+                Small and medium-sized renewable energy producers face a
+                critical business problem
+              </p>
 
-                <a
-                  href="/portfolio-projects/photovoltaic-forecasting.html"
-                  class="btn-hero btn-aionio-outline mt-3"
-                >
-                  See details
-                </a>
+              <a
+                href="/portfolio-projects/photovoltaic-forecasting.html"
+                class="btn-hero btn-aionio-outline mt-3"
+              >
+                See details
+              </a>
               </div>
             </div>
 
-            <div class="row g-4 portfolio-card" data-category="category-2">
+            <div class="row g-4 portfolio-card" data-category="category-2"  data-sdg="sdg-9">
               <!-- IMAGE -->
               <div class="col-12 col-md-6">
                 <img
