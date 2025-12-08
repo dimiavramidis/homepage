@@ -649,6 +649,18 @@
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.2);
 }
 
+/* Wrapper για τα SDG icons */
+.sdg-icons {
+  row-gap: 1rem;
+}
+
+/* Default μέγεθος για desktop/tablet */
+.sdg-icon {
+  max-height: 100px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
 /* ===========================
    Responsive: (screen < 768)
    =========================== */
@@ -710,7 +722,13 @@
     font-size: 28px;
   }
 
-    .portfolio-title {
+  .portfolio-title {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sdg-icon {
+    max-height: 80px;
   }
 }
