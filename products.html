@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>AIONIO | Contact</title>
+    <title>AIONIO | Products</title>
     <meta
       name="description"
-      content="AIONIO – AI-powered tools and automations."
+      content="AIONIO – AI consulting, data analytics, AI prototypes, MLOps and AI operations."
     />
 
     <!-- Favicon -->
@@ -18,6 +18,7 @@
       type="image/x-icon"
     />
 
+    <!-- Google Font (προαιρετικό αλλά ταιριάζει με Inter) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -48,7 +49,7 @@
       <div class="container">
         <a
           class="navbar-brand d-flex align-items-center bg-white"
-          href="/"
+          href="index.html"
         >
           <img
             src="assets/images/AIONIO_LOGO.svg"
@@ -78,7 +79,7 @@
               <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
+              <a class="nav-link active" href="products.html">Products</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about-us.html">About us</a>
@@ -95,155 +96,100 @@
     </nav>
 
     <main class="aionio-main">
-      <!-- Contact hero + form -->
-      <section class="py-5 bg-contact">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold mb-2">Get In Touch</h2>
-            <p class="text-muted mx-auto" style="max-width: 640px">
-              Use this form to reach out about job opportunities, consultation
-              requests, or to network.
+      <!-- ===== 1. Business Analysis ===== -->
+      <section id="mlframework" class="container service-section py-5">
+        <h2 class="section-title">Products</h2>
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">Machine Learning Framework</h2>
+            <p class="mb-0">
+              AIONIO’s framework is a lakehouse‑centric, end‑to‑end platform that 
+              handles every stage of the data‑and‑AI lifecycle. The platform speeds 
+              up on‑prem development, taking projects from prototype to production 
+              quickly. It covers data ingestion and processing to model training, 
+              deployment, and operations—while remaining user‑friendly and powerful 
+              without encountering limitations in product development and operations. 
+              It gives full control and lineage over data and code. With an 
+              open‑source‑first philosophy and no login barrier, it offers a fast 
+              time‑to‑market that is especially appealing to startups, SMEs and 
+              research institutions looking for a rapid, low‑barrier transition to AI.
             </p>
           </div>
-
-          <div class="row g-4 align-items-stretch justify-content-between">
-            <!-- info -->
-            <div class="col-12 col-lg-6 col-xl-4">
-              <div class="card h-100 shadow-sm border-0 contact-card">
-                <div class="card-body">
-                  <h5>Contact Information</h5>
-                  <p class="text-muted mb-4">
-                    Open for opportunities and collaboration.
-                  </p>
-
-                  <ul class="list-unstyled mb-0">
-                    <li class="d-flex align-items-center mb-3">
-                      <span class="contact-card-icon me-3">
-                        <i class="fa-solid fa-location-dot"></i>
-                      </span>
-                      <span>5436 Würenlos, Switzerland</span>
-                    </li>
-                    <li class="d-flex align-items-center mb-3">
-                      <span class="contact-card-icon me-3">
-                        <i class="fa-solid fa-envelope"></i>
-                      </span>
-                      <a
-                        href="mailto:dimitrios.avramidis@aionio.eu"
-                        class="link-dark text-decoration-none"
-                      >
-                        dimitrios.avramidis@aionio.eu
-                      </a>
-                    </li>
-                    <li class="d-flex align-items-center mb-3">
-                      <span class="contact-card-icon me-3">
-                        <i class="fa-solid fa-phone"></i>
-                      </span>
-                      <span>+41 763109934</span>
-                    </li>
-                  </ul>
-
-                  <div class="mt-4 contact-social">
-                    <a
-                    href="https://www.linkedin.com/in/dimitrios-avramidis-485553176/"
-                    target="_blank"
-                    aria-label="LinkedIn">
-                      <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="#" aria-label="GitHub">
-                      <i class="fa-brands fa-git-alt"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Form -->
-            <div class="col-12 col-lg-6 col-xl-6">
-              <form
-                class="form-narrow"
-                method="POST"
-                action="https://api.web3forms.com/submit"
-              >
-                <!-- Web3Forms -->
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="6ddd6e44-3bc8-4adb-9535-20c8ea945880"
-                />
-                <input
-                  type="hidden"
-                  name="subject"
-                  value="New Contact Message from AIONIO"
-                />
-                <input type="hidden" name="from_name" value="AIONIO Website" />
-                <input
-                  type="checkbox"
-                  name="botcheck"
-                  class="d-none"
-                  style="display: none"
-                />
-                <input
-                  type="hidden"
-                  name="redirect"
-                  value="https://www.aionio.eu/thanks.html"
-                />
-
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="name"
-                    id="name"
-                    placeholder="Name"
-                    required
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    id="message"
-                    rows="4"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-
-                <div>
-                  <button type="submit" class="btn-aionio-primary">
-                    Send message
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/products-mlframework.png"
+              class="service-image"
+            />
           </div>
         </div>
       </section>
 
-      <!-- Map section -->
-      <section class="contact-map-section">
-        <div class="container-fluid px-0">
-          <!-- map -->
-          <div class="ratio" style="--bs-aspect-ratio: 35%">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3201.3634828156382!2d8.359927676692166!3d47.43447779984722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4790129e849064a5%3A0x99bba9e3f791be0b!2zQWx0d2llc2Vuc3RyYXNzZSAzNCwgNTQzNiBXw7xyZW5sb3MsIM6VzrvOss61z4TOr86x!5e1!3m2!1sel!2sde!4v1764270812444!5m2!1sel!2sde"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+      <!-- ===== 2. Data Analytics and Science ===== -->
+      <section  id="data-analytics-science" class="container service-section py-5">
+        <div class="row align-items-center gy-4">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">AI Agents</h2>
+            <p class="mb-0">
+              AIONIO's AI agents perform specific business tasks, running on‑prem 
+              or in the cloud with stringent data‑safety guarantees that prevent leakage. 
+              Features include safety chatbots and smart document management. By 
+              taking over routine work and integrating across multiple disciplines, 
+              they free human talent for higher‑value innovation. AIONIO can redesign 
+              existing processes and embed AI agents to accelerate product development, 
+              a critical advantage for early‑stage companies focused on breakthrough solutions.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/products-ai-agents.png"
+              class="service-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. AI Prototypes ===== -->
+      <section id="Dashboards" class="container service-section py-5">
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">Dashboards</h2>
+            <p class="mb-0">
+              Customer‑centric dashboards that turn data into actionable insights 
+              for monitoring and decision‑making. Built from trusted commercial 
+              or open‑source providers, each dashboard is tailored to the 
+              client’s needs. Customizable metrics, real-time alerts and detailed 
+              reports empower teams to make informed decisions.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/products-ai-dashboard.png"
+              class="service-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 4. Machine Learning Operations ===== -->
+      <section id="Training" class="container service-section py-5">
+        <div class="row align-items-center gy-4">
+          <div class="col-12 col-lg-8">
+            <h2 class="mb-3">Training</h2>
+            <p class="mb-0">
+              Tailored courses for students, SMEs, academic bodies and enterprises 
+              cover fundamentals to advanced topics. Covering computer science fundamentals, 
+              statistics, data processing and AI development best practices, 
+              the curriculum blends theory with hands‑on labs. Each course is 
+              customised to the learner’s context, ensuring that participants 
+              gain the knowledge and skills needed to build and maintain real‑world 
+              AI solutions.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/images/products-ai-training.png"
+              class="service-image"
+            />
           </div>
         </div>
       </section>
@@ -258,7 +204,7 @@
             <!-- Logo & contact -->
             <div class="col-12 col-md-6 col-lg-5">
               <div class="mb-3">
-                <a href="/">
+                <a href="index.html">
                   <img
                     src="assets/images/AIONIO_LOGO.svg"
                     alt="AIONIO"
@@ -289,10 +235,7 @@
                   +41 763109934
                 </li>
                 <li class="mt-2 footer-social">
-                  <a
-                    href="https://www.linkedin.com/in/dimitrios-avramidis-485553176/"
-                    target="_blank"
-                    aria-label="LinkedIn"
+                  <a href="#" aria-label="LinkedIn"
                     ><i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a href="#" aria-label="GitHub"
@@ -306,11 +249,11 @@
             <div class="col-12 col-md-3 col-lg-2">
               <h5>Links</h5>
               <ul class="list-unstyled footer-links">
-                <li><a href="/">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about-us.html">About us</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
 
                 <!-- Mobile-only legal links -->
                 <li class="links-mobile">
@@ -359,7 +302,7 @@
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/navbar.js"></script>
 
-    <!-- Dynamic year -->
+    <!-- Navbar scroll behavior + dynamic year -->
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
