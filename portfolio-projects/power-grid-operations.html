@@ -46,10 +46,7 @@
       class="navbar navbar-expand-lg navbar-dark fixed-top aionio-navbar"
     >
       <div class="container">
-        <a
-          class="navbar-brand d-flex align-items-center bg-white"
-          href="/./"
-        >
+        <a class="navbar-brand d-flex align-items-center bg-white" href="/./">
           <img
             src="/assets/images/aionio-logo-removebg-preview-210x67.png"
             alt="AIONIO Logo"
@@ -148,9 +145,19 @@
             and deployment on AWS.
           </figcaption> -->
         </figure>
-        <div class="d-flex gap-3 align-items-center">
-          <img src="/assets/images/icons_sdg/sdg9.svg" alt="SDG 9" class="img-fluid" style="max-height: 80px;">
-          <img src="/assets/images/icons_sdg/sdg.svg" alt="SDG" class="img-fluid" style="max-height: 80px;">
+        <div
+          class="sdg-icons d-flex flex-wrap justify-content-center align-items-center gap-3 mt-4"
+        >
+          <img
+            src="/assets/images/icons_sdg/sdg9.svg"
+            alt="SDG 9"
+            class="img-fluid sdg-icon"
+          />
+          <img
+            src="/assets/images/icons_sdg/sdg.svg"
+            alt="SDG"
+            class="img-fluid sdg-icon"
+          />
         </div>
       </div>
     </main>
@@ -195,7 +202,10 @@
                   +41 763109934
                 </li>
                 <li class="mt-2 footer-social">
-                  <a href="#" aria-label="LinkedIn"
+                  <a
+                    href="https://www.linkedin.com/in/dimitrios-avramidis-485553176/"
+                    target="_blank"
+                    aria-label="LinkedIn"
                     ><i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a href="#" aria-label="GitHub"
