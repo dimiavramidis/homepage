@@ -11,7 +11,11 @@
   justify-content: flex-start;
   color: var(--aionio-white);
   box-sizing: border-box;
-  background: linear-gradient(135deg, #071420 0%, #0d2233 52%, #163d61 100%);
+  background:
+    radial-gradient(circle at 14% 18%, rgba(255, 192, 145, 0.12), transparent 22%),
+    linear-gradient(145deg, #040d15 0%, #0b1e2f 46%, #123657 100%);
+  --hero-shift-x: 0px;
+  --hero-shift-y: 0px;
 }
 
 /* STATIC BACKGROUND */
@@ -26,41 +30,264 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(4, 20, 35, 0.15) 0%, rgba(4, 20, 35, 0.52) 100%);
+  background:
+    linear-gradient(180deg, rgba(4, 20, 35, 0.1) 0%, rgba(4, 20, 35, 0.6) 100%),
+    radial-gradient(circle at 78% 24%, rgba(82, 177, 255, 0.12), transparent 24%);
 }
 
+.hero-background-frame,
+.hero-background-sheen,
 .hero-background-grid,
+.hero-background-particles,
 .hero-background-glow {
   position: absolute;
   inset: 0;
 }
 
+.hero-background-frame {
+  inset: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  opacity: 0.65;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.hero-background-sheen {
+  inset: -10% auto -10% 44%;
+  width: 34%;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.06) 18%, rgba(255, 255, 255, 0.02) 36%, transparent 72%);
+  transform: skewX(-18deg) translate3d(calc(var(--hero-shift-x) * 0.18), calc(var(--hero-shift-y) * 0.12), 0);
+  opacity: 0.72;
+}
+
 .hero-background-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 88px 88px;
-  opacity: 0.2;
-  transform: perspective(900px) rotateX(73deg) scale(1.45) translateY(18%);
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 84px 84px;
+  opacity: 0.24;
+  transform: perspective(900px) rotateX(73deg) scale(1.45) translateY(18%) translate3d(calc(var(--hero-shift-x) * -0.15), calc(var(--hero-shift-y) * -0.15), 0);
   transform-origin: center bottom;
+  transition: transform 0.25s ease;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 24%, rgba(0, 0, 0, 1) 100%);
+}
+
+.hero-background-beam {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(163, 219, 255, 0.56) 50%, transparent 100%);
+  opacity: 0.75;
+  transform-origin: center;
+  box-shadow: 0 0 18px rgba(127, 206, 255, 0.16);
+}
+
+.hero-background-beam-one {
+  top: 20%;
+  right: 5%;
+  width: 280px;
+  transform: rotate(-18deg);
+  animation: heroBeamPulse 7s ease-in-out infinite;
+}
+
+.hero-background-beam-two {
+  right: 14%;
+  bottom: 18%;
+  width: 220px;
+  transform: rotate(-18deg);
+  animation: heroBeamPulse 7s ease-in-out infinite -3.5s;
+}
+
+.hero-background-particles span {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 192, 145, 0.95);
+  box-shadow: 0 0 22px rgba(255, 192, 145, 0.46);
+  will-change: transform, opacity;
+}
+
+.hero-background-particles span:nth-child(1) {
+  top: 18%;
+  left: 61%;
+  animation: heroParticlePathOne 6.6s ease-in-out infinite;
+}
+
+.hero-background-particles span:nth-child(2) {
+  top: 29%;
+  left: 74%;
+  width: 7px;
+  height: 7px;
+  animation: heroParticlePathTwo 7.2s ease-in-out infinite -3s;
+}
+
+.hero-background-particles span:nth-child(3) {
+  bottom: 18%;
+  left: 67%;
+  width: 13px;
+  height: 13px;
+  animation: heroParticlePathThree 6.8s ease-in-out infinite -2s;
+}
+
+.hero-background-particles span:nth-child(4) {
+  bottom: 34%;
+  left: 56%;
+  width: 6px;
+  height: 6px;
+  animation: heroParticlePathFour 7.8s ease-in-out infinite -4.5s;
+}
+
+.hero-background-particles span:nth-child(5) {
+  top: 14%;
+  left: 82%;
+  width: 4px;
+  height: 4px;
+  animation: heroParticlePathFive 8.4s ease-in-out infinite -5s;
+}
+
+.hero-background-particles span:nth-child(6) {
+  top: 24%;
+  left: 69%;
+  width: 7px;
+  height: 7px;
+  animation: heroParticlePathThree 6.1s ease-in-out infinite -1.5s;
+}
+
+.hero-background-particles span:nth-child(7) {
+  top: 39%;
+  left: 63%;
+  width: 4px;
+  height: 4px;
+  animation: heroParticlePathFour 7.1s ease-in-out infinite -6.2s;
+}
+
+.hero-background-particles span:nth-child(8) {
+  bottom: 22%;
+  left: 76%;
+  width: 9px;
+  height: 9px;
+  animation: heroParticlePathFive 6.4s ease-in-out infinite -3.2s;
+}
+
+.hero-background-particles span:nth-child(9) {
+  top: 12%;
+  left: 72%;
+  width: 3px;
+  height: 3px;
+  animation: heroParticlePathTwo 5.9s ease-in-out infinite -2.8s;
+}
+
+.hero-background-particles span:nth-child(10) {
+  bottom: 28%;
+  left: 61%;
+  width: 7px;
+  height: 7px;
+  animation: heroParticlePathOne 6.9s ease-in-out infinite -4.8s;
+}
+
+.hero-background-particles span:nth-child(11) {
+  top: 16%;
+  left: 66%;
+  width: 12px;
+  height: 12px;
+  animation: heroParticlePathThree 6.5s ease-in-out infinite -1.2s;
+}
+
+.hero-background-particles span:nth-child(12) {
+  top: 34%;
+  left: 80%;
+  width: 6px;
+  height: 6px;
+  animation: heroParticlePathTwo 5.8s ease-in-out infinite -4.4s;
+}
+
+.hero-background-particles span:nth-child(13) {
+  bottom: 16%;
+  left: 72%;
+  width: 14px;
+  height: 14px;
+  animation: heroParticlePathFive 7.1s ease-in-out infinite -2.6s;
+}
+
+.hero-background-particles span:nth-child(14) {
+  top: 22%;
+  left: 57%;
+  width: 8px;
+  height: 8px;
+  animation: heroParticlePathOne 5.7s ease-in-out infinite -3.1s;
+}
+
+.hero-background-particles span:nth-child(15) {
+  bottom: 36%;
+  left: 64%;
+  width: 11px;
+  height: 11px;
+  animation: heroParticlePathFour 6.3s ease-in-out infinite -5.2s;
+}
+
+.hero-background-particles span:nth-child(16) {
+  top: 10%;
+  left: 78%;
+  width: 5px;
+  height: 5px;
+  animation: heroParticlePathTwo 5.4s ease-in-out infinite -1.8s;
+}
+
+.hero-background-particles span:nth-child(17) {
+  bottom: 24%;
+  left: 82%;
+  width: 13px;
+  height: 13px;
+  animation: heroParticlePathThree 7.4s ease-in-out infinite -3.9s;
+}
+
+.hero-background-particles span:nth-child(18) {
+  top: 42%;
+  left: 70%;
+  width: 7px;
+  height: 7px;
+  animation: heroParticlePathFive 5.6s ease-in-out infinite -2.2s;
+}
+
+.hero-background-particles span:nth-child(19) {
+  bottom: 12%;
+  left: 58%;
+  width: 10px;
+  height: 10px;
+  animation: heroParticlePathOne 6.2s ease-in-out infinite -4.1s;
+}
+
+.hero-background-particles span:nth-child(20) {
+  top: 26%;
+  left: 86%;
+  width: 5px;
+  height: 5px;
+  animation: heroParticlePathFour 5.2s ease-in-out infinite -1.4s;
 }
 
 .hero-background-glow {
-  filter: blur(24px);
+  filter: blur(26px);
+  transition: transform 0.25s ease;
 }
 
 .hero-background-glow-primary {
   inset: -12% auto auto -10%;
-  width: 34rem;
-  height: 34rem;
-  background: radial-gradient(circle, rgba(255, 192, 145, 0.2) 0%, rgba(255, 192, 145, 0.08) 34%, transparent 68%);
+  width: 38rem;
+  height: 38rem;
+  background: radial-gradient(circle, rgba(255, 192, 145, 0.22) 0%, rgba(255, 192, 145, 0.08) 34%, transparent 68%);
+  animation: heroGlowDrift 12s ease-in-out infinite;
+  transform: translate3d(calc(var(--hero-shift-x) * -0.3), calc(var(--hero-shift-y) * -0.3), 0);
 }
 
 .hero-background-glow-secondary {
   inset: auto -8% -18% auto;
-  width: 40rem;
-  height: 40rem;
-  background: radial-gradient(circle, rgba(58, 126, 196, 0.22) 0%, rgba(58, 126, 196, 0.08) 34%, transparent 70%);
+  width: 46rem;
+  height: 46rem;
+  background: radial-gradient(circle, rgba(58, 126, 196, 0.26) 0%, rgba(58, 126, 196, 0.08) 34%, transparent 70%);
+  animation: heroGlowDrift 14s ease-in-out infinite -5s;
+  transform: translate3d(calc(var(--hero-shift-x) * 0.25), calc(var(--hero-shift-y) * 0.25), 0);
 }
 
 /* CONTENT */
@@ -98,6 +325,108 @@
   width: auto;
   align-self: flex-start;
   padding: 10px 26px;
+}
+
+@keyframes heroGlowDrift {
+  0%,
+  100% {
+    filter: blur(26px);
+    opacity: 0.9;
+  }
+  50% {
+    filter: blur(34px);
+    opacity: 1;
+  }
+}
+
+@keyframes heroParticlePathOne {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+    opacity: 0.35;
+  }
+  35% {
+    transform: translate3d(18px, -20px, 0) scale(1.08);
+    opacity: 1;
+  }
+  68% {
+    transform: translate3d(-10px, -42px, 0) scale(0.96);
+    opacity: 1;
+  }
+}
+
+@keyframes heroParticlePathTwo {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.88);
+    opacity: 0.28;
+  }
+  40% {
+    transform: translate3d(-22px, 16px, 0) scale(1.02);
+    opacity: 0.92;
+  }
+  72% {
+    transform: translate3d(-8px, -24px, 0) scale(1.12);
+    opacity: 0.72;
+  }
+}
+
+@keyframes heroParticlePathThree {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.94);
+    opacity: 0.4;
+  }
+  32% {
+    transform: translate3d(26px, -12px, 0) scale(1.1);
+    opacity: 0.95;
+  }
+  70% {
+    transform: translate3d(-14px, -30px, 0) scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+@keyframes heroParticlePathFour {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.82);
+    opacity: 0.25;
+  }
+  46% {
+    transform: translate3d(16px, 18px, 0) scale(1.06);
+    opacity: 0.88;
+  }
+  74% {
+    transform: translate3d(30px, -10px, 0) scale(0.92);
+    opacity: 0.62;
+  }
+}
+
+@keyframes heroParticlePathFive {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0.24;
+  }
+  36% {
+    transform: translate3d(-18px, 12px, 0) scale(1.08);
+    opacity: 0.82;
+  }
+  78% {
+    transform: translate3d(-30px, -18px, 0) scale(0.92);
+    opacity: 0.58;
+  }
+}
+
+@keyframes heroBeamPulse {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.88;
+  }
 }
 
 /* ===========================
@@ -693,6 +1022,71 @@
     transform: perspective(720px) rotateX(77deg) scale(1.5) translateY(30%);
   }
 
+  .hero-background-frame {
+    inset: 12px;
+    border-radius: 22px;
+  }
+
+  .hero-background-sheen {
+    left: 52%;
+    width: 38%;
+  }
+
+  .hero-background-beam-one {
+    width: 150px;
+    right: -12px;
+  }
+
+  .hero-background-beam-two {
+    width: 100px;
+    right: 8%;
+  }
+
+  .hero-background-particles span:nth-child(1),
+  .hero-background-particles span:nth-child(2),
+  .hero-background-particles span:nth-child(3),
+  .hero-background-particles span:nth-child(4),
+  .hero-background-particles span:nth-child(5),
+  .hero-background-particles span:nth-child(6),
+  .hero-background-particles span:nth-child(7),
+  .hero-background-particles span:nth-child(8),
+  .hero-background-particles span:nth-child(9),
+  .hero-background-particles span:nth-child(10),
+  .hero-background-particles span:nth-child(11),
+  .hero-background-particles span:nth-child(12),
+  .hero-background-particles span:nth-child(13),
+  .hero-background-particles span:nth-child(14),
+  .hero-background-particles span:nth-child(15),
+  .hero-background-particles span:nth-child(16),
+  .hero-background-particles span:nth-child(17),
+  .hero-background-particles span:nth-child(18),
+  .hero-background-particles span:nth-child(19),
+  .hero-background-particles span:nth-child(20) {
+    left: auto;
+    right: 8%;
+  }
+
+  .hero-background-particles span:nth-child(1) { top: 20%; }
+  .hero-background-particles span:nth-child(2) { top: 30%; }
+  .hero-background-particles span:nth-child(3) { bottom: 24%; }
+  .hero-background-particles span:nth-child(4) { bottom: 32%; }
+  .hero-background-particles span:nth-child(5) { top: 14%; }
+  .hero-background-particles span:nth-child(6) { top: 24%; }
+  .hero-background-particles span:nth-child(7) { top: 38%; }
+  .hero-background-particles span:nth-child(8) { bottom: 20%; }
+  .hero-background-particles span:nth-child(9) { top: 10%; }
+  .hero-background-particles span:nth-child(10) { bottom: 28%; }
+  .hero-background-particles span:nth-child(11) { top: 16%; }
+  .hero-background-particles span:nth-child(12) { top: 34%; }
+  .hero-background-particles span:nth-child(13) { bottom: 16%; }
+  .hero-background-particles span:nth-child(14) { top: 22%; }
+  .hero-background-particles span:nth-child(15) { bottom: 36%; }
+  .hero-background-particles span:nth-child(16) { top: 10%; }
+  .hero-background-particles span:nth-child(17) { bottom: 24%; }
+  .hero-background-particles span:nth-child(18) { top: 42%; }
+  .hero-background-particles span:nth-child(19) { bottom: 12%; }
+  .hero-background-particles span:nth-child(20) { top: 26%; }
+
   .hero-content {
     align-items: center;
     text-align: center;
@@ -722,6 +1116,20 @@
 
   .portfolio-selects {
     justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-background-beam,
+  .hero-background-particles span,
+  .hero-background-glow {
+    animation: none;
+  }
+
+  .hero-background-grid,
+  .hero-background-glow-primary,
+  .hero-background-glow-secondary {
+    transform: none;
   }
 }
 
