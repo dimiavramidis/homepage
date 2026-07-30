@@ -29,19 +29,12 @@ function sendVideoTrackingEvent(eventType, details = {}) {
 
   const body = JSON.stringify(payload);
 
-  if (navigator.sendBeacon) {
-    const blob = new Blob([body], { type: "application/json" });
-    const queued = navigator.sendBeacon(endpoint, blob);
-
-    if (queued) {
-      return;
-    }
-  }
-
   fetch(endpoint, {
     method: "POST",
+    mode: "cors",
+    credentials: "omit",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "text/plain;charset=UTF-8",
     },
     body,
     keepalive: true,
