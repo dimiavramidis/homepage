@@ -140,5 +140,17 @@
         video. -->
       </p>
     </main>
+
+    <script>
+      window.AIONIO_VIDEO_TRACKING_ENDPOINT =
+        "https://fue903ubi4.execute-api.eu-central-1.amazonaws.com/gatewaystage/video-tracking";
+    </script>
+    <script src="scripts/video-tracking.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const videoElement = document.querySelector("video");
+        attachVideoTracking(videoElement);
+      });
+    </script>
   </body>
 </html>
